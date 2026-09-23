@@ -32,6 +32,12 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - **Guardrails:** no "licensed", no "Medicaid provider", no tenure, no address, no "statewide" until confirmed.
 - Survey had no business-name field; the name came from the uploaded logo.
 
+## 2026-09-22 SEO research (free sources; SE Ranking out of credits)
+- **Report:** `seo/keyword-research.md` (keyword map, live map-pack snapshot, Google Business Profile plan). Raw agent output is in `seo/research-2026-09-22/`.
+- No local provider ranks organically. The map-pack leaders are Hammond (4.5/33), **Mitresonz (5.0/185)** and Tender Kare (3.3/74). Nearly all competitors use the generic "Transportation service" category.
+- No search volumes yet. Backfill from Keyword Planner, or from SE Ranking once credits are topped up.
+- Verida/Southeastrans phone numbers conflict between sources. Verify on LDH before publishing any.
+
 ## 🚨 Before publishing ANY public claim
 Run `06-Reports/records-check.md`. Verify license, years in business
 (Less than 1 year), and registered address vs. service area against
@@ -41,7 +47,7 @@ authoritative sources. Do not print unverified credentials.
 1. ~~Sample brand hex~~ done 2026-09-22 (raster; confirm from vector).
 2. ~~Public-records check~~ first pass done; confirm SoS record by hand.
 3. Create the design system in Stitch from `DESIGN.md`.
-4. SEO suite → homepage → priority pages (_not captured_).
+4. ~~SEO research~~ first pass done 2026-09-22 (`seo/keyword-research.md`). Next: sitemap + homepage brief; service and city pages wait on client asks #2, #4, #6 and #7.
 
 ## Open confirmations
 - [ ] Brand hex confirmed from vector + fonts
