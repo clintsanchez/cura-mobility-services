@@ -97,5 +97,10 @@
 - **Sidebar:** 9 service links, the "Send a message" form (emails clint@blaksheepcreative.com ⏳), Download box hidden.
 - **Main column:** banner, photo, intro, photo plus 5-point checklist, 3 FAQs; the team grid is hidden.
 - **Drafted:** Services Single 212 (renamed "Services Single (template)"), Services List 210 (it would duplicate /services/), Team Member 200 and Testimonial 202 (no real team or reviews yet).
-- **Still demo:** templates Single Post 369, 404 392, Search Results 396 and Post Archive 454. Hidden (draft) elements still hold pack image URLs; they don't render, but strip them before launch.
+- **Templates cleaned:**
+  - 369, 392, 396 and 454 now use the Baton Rouge skyline banner.
+  - 404 copy rewritten.
+  - The Single Post demo gallery and social icons are hidden; the related posts are relabeled "More articles".
+  - A rendered-HTML crawl of all 16 public pages, plus a 404 and a search URL, finds no pack domains, lorem, taxi or "Lifetime" text.
+  - Hidden (draft) elements still hold pack image URLs in `_breakdance_data`; strip them before launch.
 - **Dynamic phase later:** move the 9 pages into the `services` CPT with a Breakdance single template and Meta Box fields (intro, bullets, FAQs, images), then swap the Services grid, the sidebar and the Book a Ride cards to loops.
