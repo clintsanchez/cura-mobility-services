@@ -56,12 +56,12 @@ authoritative sources. Do not print unverified credentials.
 ## Next steps (when resuming)
 1. ~~Sample brand hex~~ done 2026-09-22 (raster; confirm from vector).
 2. ~~Public-records check~~ first pass done; confirm SoS record by hand.
-3. Create the design system in Stitch from `DESIGN.md`.
+3. Stitch design system: optional now (building in Breakdance; design kit in `website/breakdance-global-settings.md`).
 4. ~~SEO research~~ first pass done 2026-09-22 (`seo/keyword-research.md`). Next: sitemap + homepage brief; service and city pages wait on client asks #2, #4, #6 and #7.
 
 ## Open confirmations
 - [ ] Brand hex confirmed from vector (raster re-sample matches) · fonts proposed: Montserrat + Atkinson Hyperlegible (client to approve)
-- [ ] Logo: raster only; working 3-color SVG trace in `brand/assets/`. Needs vector originals or a redraw before print/van graphics
+- [ ] Logo: web-grade traced set in `brand/assets/svg` + `png`. Print/van graphics still need vector originals (ask #11) or a redraw
 - [ ] Pricing display (public vs. quote/subscription)
 - [ ] Tagline (recommend "Cura means care."; options in `brand/messaging.md`)
 - [ ] Service-area page priority (grow-in: _not captured_)
