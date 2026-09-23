@@ -76,3 +76,26 @@
 - **Helper bug fixed:** `cura_bd_copy_into` looped over `($dst['children'] ?? [])`, a temporary copy, so earlier section copies only changed the top node. All copies have been re-run. A scan of every built page for lorem, taxi, cab, pack-domain hotlinks, $ prices, "Lifetime" and the demo names now comes back clean.
 - **URL conflict fixed:** the BSC Meta Box post types **Services** (mb-post-type 31) and **FAQs** (19) had `has_archive: true`, so `/services/` and `/faqs/` served empty CPT archives instead of the pages. Archives are now off and rewrite rules are flushed. Keep these CPTs: they are the data source for the planned loop/card phase, with singles at `/services/<slug>/`.
 - **Contrast fix:** eyebrow labels on the navy and slate bands (home 342/245, services 135, about 145/219, book 152, rates 136) are now Tint #E6F4F4; they were palette navy.
+
+## Build log: service pages (2026-09-23)
+- **9 service pages** built from the Services Single (212) structure as top-level pages at the slugs Services 182 already links to:
+
+  | Page | ID | Slug |
+  |---|---|---|
+  | Doctor and specialist visits | 1304 | `/doctor-appointment-rides/` |
+  | Dialysis rides | 1307 | `/dialysis-transportation/` |
+  | Wheelchair transportation | 1310 | `/wheelchair-transportation/` |
+  | Hospital discharge rides | 1314 | `/hospital-discharge-rides/` |
+  | Treatment and therapy rides | 1318 | `/treatment-and-therapy-rides/` |
+  | Senior and everyday rides | 1322 | `/senior-and-everyday-rides/` |
+  | Prescription pickups | 1326 | `/prescription-pickup-and-delivery/` |
+  | Long-distance medical trips | 1328 | `/long-distance-medical-transportation/` |
+  | Recurring ride schedules | 1331 | `/recurring-rides/` |
+
+  - Top-level rather than `/services/<slug>/`, so they never collide with the `services` CPT rewrite.
+  - Copy, photos, bullets and FAQs are in `website/content/service-pages.php` (the same file the build reads from the sandbox).
+- **Sidebar:** 9 service links, the "Send a message" form (emails clint@blaksheepcreative.com ⏳), Download box hidden.
+- **Main column:** banner, photo, intro, photo plus 5-point checklist, 3 FAQs; the team grid is hidden.
+- **Drafted:** Services Single 212 (renamed "Services Single (template)"), Services List 210 (it would duplicate /services/), Team Member 200 and Testimonial 202 (no real team or reviews yet).
+- **Still demo:** templates Single Post 369, 404 392, Search Results 396 and Post Archive 454. Hidden (draft) elements still hold pack image URLs; they don't render, but strip them before launch.
+- **Dynamic phase later:** move the 9 pages into the `services` CPT with a Breakdance single template and Meta Box fields (intro, bullets, FAQs, images), then swap the Services grid, the sidebar and the Book a Ride cards to loops.
