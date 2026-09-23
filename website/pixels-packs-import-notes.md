@@ -45,3 +45,23 @@
   - H1/H2/H3 scale per the style guide. Primary button: navy, Teal Deep on hover, 10px radius, 17px/600.
 - Font Awesome CDN **not added**. No page uses FA classes; Breakdance icons are inline SVG.
 - **Still demo content:** taxi imagery, lorem ipsum, "Since 1992" stats, taxi rates, Pixels logos in the header, footer and logo strip, a "Get Lifetime Access" promo badge, and a New York address and phone in the top bar.
+
+## Build log: header, footer, homepage (2026-09-23)
+- **Helper:** `wp-content/novamira-sandbox/cura-bd.php` (`cura_bd_load/set/get/remove/save`, `cura_upload`, `cura_bd_image`). `cura_bd_save` rewrites `_breakdance_data` and regenerates the page CSS via `Breakdance\Render\generateCacheForPost()`. Note: `function_exists()` needs the namespace **without** a leading backslash.
+- **Header 176:** Cura horizontal logo; "Primary" WP menu (id 35: Home, About, Services, Rates, FAQs, Contact) assigned via `content.menu.menu`; top bar set to (225) 363-0845 (tel), info@curamobility.org ⏳ (domain unconfirmed), "Serving the Baton Rouge area"; social icons removed (no accounts); button → "Book a ride" → /book-a-ride/.
+- **Pages renamed:** Get A Cab 206 → **Book a Ride** `/book-a-ride/`; Taxi Rates 208 → **Rates** `/rates/`.
+- **Footer 244:** CTA "Book your next ride" + phone button; on-navy logo; description with the 911 line; link grid; contact column; "Stay in touch" sign-up; dynamic © year with "Cura Mobility Services. All rights reserved."; social icons and the **"GET LIFETIME ACCESS" Pixels promo button removed**.
+- **Home 67:** every section kept in order, content swapped:
+  - The hero label color was changed to #E6F4F4 (navy was unreadable on the photo).
+  - The ride-request form now emails **clint@blaksheepcreative.com** (it was the pack author's Gmail). ⏳ Switch to Michael at handoff.
+  - Payment-brand icons removed (accepted methods unconfirmed).
+  - Progress-bar percentages removed.
+  - Rates tables became "ride types" with no prices.
+  - Client-logo wall (194) and reviews (415) set to `settings.advanced.draft` (hidden) until real ones exist.
+  - Service icons: Font Awesome 6 Free solid (stethoscope, wheelchair, hospital) as inline SVG.
+  - Default "Hello world!" post trashed.
+- **Global CSS (`settings.code.stylesheets`):**
+  - "Cura: accessibility": hides `.bde-skip-link` until focused, plus focus rings. It was visible because the child theme lacks Breakdance's base skip-link rule.
+  - Senior Care "layout classes" (`.px_container`, `.px_footer_link`, `.px_page_title_breadcrums`), needed by SC sections.
+  - Senior Care "image and icon transitions", **with its `.button-atom--primary:after` Font Awesome arrow removed**: it needs the FA CDN, and it rendered as an empty box on every Cab button.
+- **Copy flags for Michael (⏳):** the owner quote "Cura is Latin for care. It is how we drive, every ride." (attributed to Michael Veal, Owner); "call when we are on the way" and "recurring rides" promises; info@curamobility.org.
