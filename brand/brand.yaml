@@ -2,7 +2,7 @@ schema_version: 1
 slug: cura-mobility-services
 name: Cura Mobility Services
 one_liner: Warm, reliable non-emergency medical rides by van for families in the Baton Rouge area.
-tagline: ""
+tagline: "Cura means care."  # recommended, pending client approval
 archetype: ""
 status: draft
 stage: pre-launch
@@ -21,7 +21,7 @@ artifacts:
   architecture: false
   identity: false
   voice: true
-  messaging: false
+  messaging: true
   positioning: false
   story: false
   guidelines: true

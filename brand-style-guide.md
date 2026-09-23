@@ -31,10 +31,21 @@ This guide is for anyone who designs or writes for Cura: BlakSheep during the bu
 
 ### Logo
 - **Primary logo:** a stacked lockup. A navy shield holds a white van with a medical cross and caduceus, circled by a teal-to-navy swoosh. Below it sits the "CURA" wordmark (navy C-R-A, teal U, an open Bible with a cross inside the R) over the teal tagline "— MOBILITY SERVICES, LLC —".
-- **Files on hand:**
-  - `brand/assets/cura-logo-original.jpg`: the client raster, 1170×692. It is the master reference.
-  - `brand/assets/cura-logo-traced-working.svg`: a 3-color trace for the web. The swoosh gradient is flattened, so it is not print-grade.
-  - ⏳ Vector originals requested (ask #11). The logo appears AI-generated, so none may exist. Budget a clean redraw before signage or van wraps.
+- **Files on hand** (`brand/assets/`, mirrored to pCloud `01-Brand-Assets/`):
+  - `cura-logo-original.jpg`: the client raster, 1170×692. It is the master reference.
+  - `svg/`: traced vector set in navy/teal/white. The swoosh uses a real navy-to-teal linear gradient, as in the original.
+    - `cura-logo-stacked`: primary.
+    - `cura-logo-horizontal`: website header.
+    - `cura-logo-mark`: the shield alone.
+    - `cura-logo-square`: the mark centered in a square, for icons.
+    - `cura-logo-wordmark`: CURA plus the tagline.
+    - Each comes in an `-on-navy` version for navy backgrounds: navy becomes white, the tagline is white for contrast, and the swoosh runs white to teal.
+  - `png/`:
+    - Favicons: `favicon.ico` (16/32/48), `favicon-32`, `favicon-48`.
+    - Icons: `apple-touch-icon-180` and `site-icon-512` (WordPress Site Icon).
+    - Avatars: `gbp-avatar-720` (Google profile) and `social-avatar-navy-720`.
+    - Logos: transparent `cura-logo-horizontal-1200`, `cura-logo-stacked-1200` and their on-navy versions.
+  - The trace is web-grade. ⏳ For print, signage or van wraps, get Michael's vector originals (ask #11) or budget a clean redraw. The logo appears AI-generated, so originals may not exist.
 - **Variations to produce** (from the vector, once available):
   - Full-color stacked (primary).
   - Horizontal: shield mark left, wordmark right. Use it in the website header.
@@ -150,10 +161,12 @@ Full detail is in `brand/voice.md`. Essentials:
 
 - **Core message:** Safe, on-time rides to medical appointments, with the care you'd give your own family.
 - **Value proposition:** Cura Mobility Services drives Baton Rouge-area riders to doctor visits, dialysis, treatments and hospital discharges. We come to the door, help riders in and out, and get them there on time. We explain costs and payment options up front.
-- **Tagline options** (none approved yet):
-  1. "On time. On your side."
-  2. "Rides with care."
-  3. "Getting you there, like family."
+- **Tagline options** (none approved yet; full framework in `brand/messaging.md`):
+  1. **"Cura means care."** (recommended: "cura" is Latin for care, so it's unique to the name)
+  2. "On time. On your side." (secondary line for ads and booking)
+  3. "Rides with care." (van graphics)
+  4. "Getting you there, like family."
+  5. "Safe rides. Kind hands."
 - **Key messages** (each backed by a real operating behavior before publishing):
   1. **We show up.** Day-before confirmation and a call when we're on the way. ⏳ Confirm the process.
   2. **We help door to door.** Assistance from the front door to the clinic check-in.

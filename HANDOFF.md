@@ -33,7 +33,10 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - Survey had no business-name field; the name came from the uploaded logo.
 
 ## Brand package (2026-09-22)
-- `brand/` package: `brand.yaml`, `context.md`, `voice.md`. `brand-style-guide.md` is rewritten (guidelines, contrast-checked palette, type, logo rules). `DESIGN.md` and `css-tokens.css` are synced. Still to run: messaging (tagline), identity/logo variations once a vector exists.
+- `brand/` package: `brand.yaml`, `context.md`, `voice.md`. `brand-style-guide.md` is rewritten (guidelines, contrast-checked palette, type, logo rules). `DESIGN.md` and `css-tokens.css` are synced.
+- **Logo set (2026-09-23):** `brand/assets/svg/` holds 10 SVGs (stacked, horizontal, mark, square and wordmark, each with an on-navy version; the swoosh has a real gradient). `brand/assets/png/` holds favicons, the site icon, avatars and transparent logos. All are web-grade; print still needs the originals or a redraw.
+- **Messaging:** `brand/messaging.md`. Recommended tagline: "Cura means care." (cura is Latin for care), pending Michael.
+- **Breakdance design kit:** `website/breakdance-global-settings.md` maps the Cab Service pack's 6 palette slots, fonts and buttons to Cura, plus the CTA standard and the pack clean-up checklist.
 
 ## Scope decision (2026-09-22)
 - **Turnkey WordPress-only site.** No monthly maintenance and no GHL: forms, booking and review requests must work natively in WordPress. **Builder: Breakdance** (decided 2026-09-23; this replaces the brief Elementor decision). The Pixels Library Plus packs sit closest to Michael's inspiration sites (a photo hero with an overlapping ride-booking form), and it's the leanest stack: Breakdance Pro plus free SEOPress, with forms, header and footer built in. The templates are the **Cab Service Layouts Pack** (booking hero and structure) and the **Senior Care Layouts Pack v2** (warm care sections). See `06-Reports/template-kit-shortlist-2026-09-23.md`. Open: whether Cura stays on Clint's Breakdance license after handoff (lifetime?) or Michael buys his own. Strip the kits' invented stats and replace hotlinked demo images before launch. The monthly content-engine/blog-CTA fulfilment doesn't apply after launch unless the scope changes.
@@ -60,7 +63,7 @@ authoritative sources. Do not print unverified credentials.
 - [ ] Brand hex confirmed from vector (raster re-sample matches) · fonts proposed: Montserrat + Atkinson Hyperlegible (client to approve)
 - [ ] Logo: raster only; working 3-color SVG trace in `brand/assets/`. Needs vector originals or a redraw before print/van graphics
 - [ ] Pricing display (public vs. quote/subscription)
-- [ ] Tagline
+- [ ] Tagline (recommend "Cura means care."; options in `brand/messaging.md`)
 - [ ] Service-area page priority (grow-in: _not captured_)
 - [ ] Move credentials to password manager, delete `CREDENTIALS.local.md`
 
