@@ -1,6 +1,6 @@
 # Cura Mobility Services: asks for Michael
 
-Gmail draft created 2026-09-22 (to mveal72@yahoo.com), not sent. Asks only.
+Sent by Clint 2026-09-22 to mveal72@yahoo.com (Gmail thread 1a0cc079d1aa2992). Awaiting answers.
 
 1. Which domain do you own: curamobility.org, curamobility.com, or both?
 2. In a sentence or two, what services do you offer (ambulatory, wheelchair, stretcher, dialysis, long distance)?
