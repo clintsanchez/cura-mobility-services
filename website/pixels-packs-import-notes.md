@@ -65,3 +65,14 @@
   - Senior Care "layout classes" (`.px_container`, `.px_footer_link`, `.px_page_title_breadcrums`), needed by SC sections.
   - Senior Care "image and icon transitions", **with its `.button-atom--primary:after` Font Awesome arrow removed**: it needs the FA CDN, and it rendered as an empty box on every Cab button.
 - **Copy flags for Michael (⏳):** the owner quote "Cura is Latin for care. It is how we drive, every ride." (attributed to Michael Veal, Owner); "call when we are on the way" and "recurring rides" promises; info@curamobility.org.
+
+## Build log: inner pages (2026-09-23)
+- **About 180, Services 182, Contact 186, FAQs 204, Book a Ride 206, Rates 208:** pack structure kept section for section; content, images and links swapped for Cura's.
+  - **Contact:** the address box is now "Service area" (no street address); socials removed. The form emails clint@blaksheepcreative.com ⏳. The map is a key-free Google embed of Baton Rouge; it replaced the pack's "Crazy Cars, NJ" iframe, which carried an API key.
+  - **FAQs:** 9 plain-language Q&As covering what NEMT is, booking, notice, mobility aids, pricing, Medicare and Medicaid, ride-alongs and service area. There is no provider claim; the answers point people to their own plan. The request form is copied from home; the team section is hidden.
+  - **Book a Ride:** a phone strip, the ride-request form, 4 "Who we help" image cards (no prices), ride options and a CTA.
+  - **Rates:** "How pricing works" uses the no-price ride-options tables; the team section is hidden.
+- **Breakdance FAQ element:** reads `content.settings.items[{question,answer}]`, not `questions`.
+- **Helper bug fixed:** `cura_bd_copy_into` looped over `($dst['children'] ?? [])`, a temporary copy, so earlier section copies only changed the top node. All copies have been re-run. A scan of every built page for lorem, taxi, cab, pack-domain hotlinks, $ prices, "Lifetime" and the demo names now comes back clean.
+- **URL conflict fixed:** the BSC Meta Box post types **Services** (mb-post-type 31) and **FAQs** (19) had `has_archive: true`, so `/services/` and `/faqs/` served empty CPT archives instead of the pages. Archives are now off and rewrite rules are flushed. Keep these CPTs: they are the data source for the planned loop/card phase, with singles at `/services/<slug>/`.
+- **Contrast fix:** eyebrow labels on the navy and slate bands (home 342/245, services 135, about 145/219, book 152, rates 136) are now Tint #E6F4F4; they were palette navy.
