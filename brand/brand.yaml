@@ -1,0 +1,28 @@
+schema_version: 1
+slug: cura-mobility-services
+name: Cura Mobility Services
+one_liner: Warm, reliable non-emergency medical rides by van for families in the Baton Rouge area.
+tagline: ""
+archetype: ""
+status: draft
+stage: pre-launch
+industry: Non-emergency medical transportation (NEMT)
+languages: [en]
+links:
+  domain: curamobility.org  # UNCONFIRMED ownership
+  repo: https://github.com/clintsanchez/cura-mobility-services
+created: 2026-09-22
+updated: 2026-09-22
+version: 1
+artifacts:
+  context: true
+  naming: false
+  strategy: false
+  architecture: false
+  identity: false
+  voice: true
+  messaging: false
+  positioning: false
+  story: false
+  guidelines: true
+  audit: false

@@ -32,6 +32,12 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - **Guardrails:** no "licensed", no "Medicaid provider", no tenure, no address, no "statewide" until confirmed.
 - Survey had no business-name field; the name came from the uploaded logo.
 
+## Brand package (2026-09-22)
+- `brand/` package: `brand.yaml`, `context.md`, `voice.md`. `brand-style-guide.md` is rewritten (guidelines, contrast-checked palette, type, logo rules). `DESIGN.md` and `css-tokens.css` are synced. Still to run: messaging (tagline), identity/logo variations once a vector exists.
+
+## Scope decision (2026-09-22)
+- **Turnkey WordPress-only site.** No monthly maintenance and no GHL: forms, booking and review requests must work natively in WordPress. The builder is still undecided. The monthly content-engine/blog-CTA fulfilment doesn't apply after launch unless the scope changes.
+
 ## 2026-09-22 SEO research (free sources; SE Ranking out of credits)
 - **Report:** `seo/keyword-research.md` (keyword map, live map-pack snapshot, Google Business Profile plan). Raw agent output is in `seo/research-2026-09-22/`.
 - No local provider ranks organically. The map-pack leaders are Hammond (4.5/33), **Mitresonz (5.0/185)** and Tender Kare (3.3/74). Nearly all competitors use the generic "Transportation service" category.
@@ -51,7 +57,8 @@ authoritative sources. Do not print unverified credentials.
 4. ~~SEO research~~ first pass done 2026-09-22 (`seo/keyword-research.md`). Next: sitemap + homepage brief; service and city pages wait on client asks #2, #4, #6 and #7.
 
 ## Open confirmations
-- [ ] Brand hex confirmed from vector + fonts
+- [ ] Brand hex confirmed from vector (raster re-sample matches) · fonts proposed: Montserrat + Atkinson Hyperlegible (client to approve)
+- [ ] Logo: raster only; working 3-color SVG trace in `brand/assets/`. Needs vector originals or a redraw before print/van graphics
 - [ ] Pricing display (public vs. quote/subscription)
 - [ ] Tagline
 - [ ] Service-area page priority (grow-in: _not captured_)
