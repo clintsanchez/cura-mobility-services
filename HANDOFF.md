@@ -28,7 +28,7 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - **Palette:** navy `#02265A`, logo teal `#058D8D` (graphics only), text-safe teal `#047878`. Sampled from JPG; confirm from vector.
 - **CSS prefix:** `cura-`. See `CONTENT-ENGINE-CONTRACT.md`.
 - **Research:** `06-Reports/research-2026-09-22.md` (domain, licensing path, competitors, keywords).
-- **Client asks:** `CLIENT-ASKS.md`, drafted, **not sent**. Everything downstream waits on #1 to #3.
+- **Client asks:** `CLIENT-ASKS.md`, Gmail draft created, **not sent**. Everything downstream waits on #1 to #3.
 - **Guardrails:** no "licensed", no "Medicaid provider", no tenure, no address, no "statewide" until confirmed.
 - Survey had no business-name field; the name came from the uploaded logo.
 
@@ -52,3 +52,6 @@ authoritative sources. Do not print unverified credentials.
 
 ## Trello board
 - **Cura Mobility Services:** https://trello.com/b/5kLuwsCB/cura-mobility-services
+
+## Repo
+- GitHub: https://github.com/clintsanchez/cura-mobility-services (private)
