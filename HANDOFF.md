@@ -36,6 +36,7 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - **Report:** `seo/keyword-research.md` (keyword map, live map-pack snapshot, Google Business Profile plan). Raw agent output is in `seo/research-2026-09-22/`.
 - No local provider ranks organically. The map-pack leaders are Hammond (4.5/33), **Mitresonz (5.0/185)** and Tender Kare (3.3/74). Nearly all competitors use the generic "Transportation service" category.
 - No search volumes yet. Backfill from Keyword Planner, or from SE Ranking once credits are topped up.
+- **Services proxy:** Michael texted (2026-09-22) that his model matches his consultant's company **Mitresonz** (mitresonz.net), minus the luxury services. Use Mitresonz's service list as the working assumption until he answers ask #2. He also sent 3 more inspiration sites; see `00-Client-Brief.md` §7.
 - Verida/Southeastrans phone numbers conflict between sources. Verify on LDH before publishing any.
 
 ## 🚨 Before publishing ANY public claim

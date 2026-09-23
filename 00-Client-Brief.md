@@ -77,8 +77,12 @@ See `06-Reports/research-2026-09-22.md`.
 
 ## 7. Competitors & Inspiration
 
-- **Top competitors:** _not captured_
-- **Websites admired:** _not captured_
+- **Top competitors:** _not captured_ (see `seo/keyword-research.md` §2)
+- **Websites admired** (sent by iMessage 2026-09-22; analysis in `seo/research-2026-09-22/inspiration-sites.md`):
+  - https://moridellc.com/reliable-transportation-services-in-baton-rouge-la
+  - https://caremove.us/
+  - https://www.goldenridestransport.com/
+  - https://mitresonz.net/: his **consultant's company**. In his words: *"my business model is closer to hers. Everything that she has with the exception of the luxury services is what I provide."* Mitresonz is also the Baton Rouge Maps review leader (5.0 stars, 185 reviews).
 - **Brands admired:** _not captured_
 
 ---

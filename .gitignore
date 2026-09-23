@@ -5,3 +5,4 @@ memory/ghl-onboarding-raw.json
 __pycache__/
 *.pyc
 build/*.html
+.playwright-mcp/

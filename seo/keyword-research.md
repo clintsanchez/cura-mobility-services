@@ -68,6 +68,22 @@ These four phrases return the same results, so they go on **one page**. Splittin
 
 **Wording rule:** lead with "wheelchair transportation", never "wheelchair van". The "wheelchair van(s) baton rouge" results are dealers and rentals (Superior Van, AMS Vans) and share no results with the ride-service query.
 
+### Working service list (added 2026-09-22 from Michael's texts)
+Michael says his model is the same as his consultant's company, **Mitresonz**, minus luxury (see `research-2026-09-22/inspiration-sites.md`). The list below is **[INFERRED — confirm with client]**. It changes the map as follows:
+
+| Mitresonz service | Cura page / keyword impact |
+|---|---|
+| Non-Emergency Medical Transportation | Hub (unchanged) |
+| ADA Passenger Transport, bariatric passengers, oversized scooters | **Wheelchair Transportation** page becomes more likely. Add a **bariatric** section with the keyword "bariatric transportation baton rouge" (proxy not yet checked). Confirm a ramp/lift van and weight capacity. |
+| Passenger Transport (non-medical), holidays | Broadens beyond medical rides. One "Everyday & Senior Rides" page (errands, church, family events), folded into the Senior page. WE LIFT shows non-medical wheelchair trips have demand. |
+| Prescription Drop Offs, Small Delivery, Courier Services | Possible **Prescription & Medical Courier** page ("prescription delivery baton rouge", "medical courier baton rouge"). Separate intent. Proxy not yet checked. Build only if Michael confirms he wants to promote it. |
+| Child school pick-up/drop-off, grocery pick-up | Keep low priority. It dilutes the medical positioning. At most one line on the Everyday page. |
+| Long distance | Moves off hold if confirmed. |
+| ~~Premier Luxury Vehicle Transport~~ | Excluded per Michael. |
+| Stretcher | Not offered by Mitresonz. Stays off. |
+
+Hours for the consultant's company are Mon–Thu 8–5, Fri 8–12, weekends by appointment. Cura's hours are unknown. Don't copy hers.
+
 ### Payer, cost and resource pages (high accuracy risk: fact-check each one)
 | Page | Primary | Secondary | Proxy | Gate |
 |---|---|---|---|---|
@@ -126,5 +142,5 @@ Business-startup queries ("how to start a transportation business"), jobs, van s
 ## 8. Next steps
 1. Chase Michael's answers to asks #2 (services), #4 (Medicaid), #6 (address) and #7 (coverage). They unlock the ⏸ pages and the Google Business Profile.
 2. Pull volumes for the ~30 map keywords from Google Keyword Planner, or wait for SE Ranking credits.
-3. Review Mitresonz's site and profile as the review and positioning benchmark.
+3. ~~Review Mitresonz~~ done. Her site is a single thin GoDaddy page; her Maps lead comes from reviews alone. Worth asking Michael whether his consultant will share her review-request process.
 4. Draft the sitemap and homepage brief from section 3 (hub plus senior and FAQ pages can start now; the rest wait on client answers).
