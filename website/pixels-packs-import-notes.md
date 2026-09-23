@@ -104,3 +104,43 @@
   - A rendered-HTML crawl of all 16 public pages, plus a 404 and a search URL, finds no pack domains, lorem, taxi or "Lifetime" text.
   - Hidden (draft) elements still hold pack image URLs in `_breakdance_data`; strip them before launch.
 - **Dynamic phase later:** move the 9 pages into the `services` CPT with a Breakdance single template and Meta Box fields (intro, bullets, FAQs, images), then swap the Services grid, the sidebar and the Book a Ride cards to loops.
+
+## Dynamic phase: loops and cards (2026-09-23)
+**Content now lives in posts; Breakdance loops render it. Editors change services and FAQs in WP admin, not in the builder.**
+
+### Data (Meta Box, on the BSC blueprint's post types)
+- **Service Content** field group (meta-box post 1337) on `services`:
+  - `card_icon`: select from the `cura_icons` option, which holds 13 Font Awesome 6 solid SVGs.
+  - `banner_image`, `detail_image`.
+  - `highlights`: cloneable group, subfield `text`.
+  - The Services type now also supports the editor (intro text). Title, excerpt (card text), featured image and menu order (sort) were already supported.
+- **9 Services posts** (1338–1370) at `/services/<slug>/`, sorted by menu order. The static service pages 1304–1331 are **trashed**.
+- **36 FAQs posts:**
+  - 9 **General**, used on the FAQs page.
+  - 27 **Service questions**, each linked to its service via the blueprint relationship `faq_to_service`.
+- **Build scripts** (idempotent; run via Novamira `execute-php` with `require`) are in `website/build/`: `cura-data.php`, `cura-template.php` and the `cura-bd.php` helpers. The live copies sit in `wp-content/cura-build/`.
+  - ⚠️ **Never put scripts with top-level code in `wp-content/novamira-sandbox/`.** Novamira auto-loads every file there on every request.
+
+### Breakdance
+- **Global blocks:**
+  - **Service card** (1383): Div > Code Block (icon from `card_icon`) + the pack's IconBox with dynamic title, excerpt and permalink.
+  - **Service sidebar link** (1384): the pack's sidebar Button with dynamic title and permalink.
+  - **Service highlight** (1385): the pack's IconList with one item bound to `metabox_field_highlights_text`.
+  - **FAQ answer** (1386): Text bound to post content.
+- **Services page 182:** a Post Loop (services, menu order, 3 per row, 32px gap) replaces the 3 static card rows.
+- **Single Service template** (breakdance_template 1387, type `services`), built from the static service layout:
+  - Banner bound to `banner_image`, photo to the featured image, title and intro to post title and content, second photo to `detail_image`.
+  - Sidebar = Post Loop of services.
+  - Highlights = Dynamic Data Loop on `metabox_group_highlights`.
+  - FAQs = Post Loop (accordion) with a PHP query on the `faq_to_service` relationship to the current service.
+  - The hidden download box and team section are dropped.
+- **FAQs page 204:** the static FAQ element is replaced by a Post Loop (accordion) of General FAQs.
+- **Global CSS:**
+  - "Cura: cards": the card box and icon square, matched to the pack column and IconBox.
+  - "Cura: loops": zero loop-item padding for Cura blocks, and FAQ-loop styling matched to the pack's FAQ element (#F3F6F9 closed, navy open, plus/minus icons, 10px gap).
+- **Stays static on purpose:** Home's 3 service summary boxes (curated combined copy) and Book a Ride's "Who we help" cards (ride types, not services).
+- **Gotchas:**
+  - Any property string containing `[breakdance_dynamic ...]` renders dynamically, including image and background-image values.
+  - Text bindings need `<prop>_dynamic_meta`; URL bindings need `link.dynamicMeta`.
+  - Global settings are stored double-JSON-encoded, and stylesheet CSS sits under `code`.
+  - Don't iterate `($x['children'] ?? [])` by reference; it's a temporary copy.
