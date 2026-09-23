@@ -38,6 +38,10 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - **Messaging:** `brand/messaging.md`. Recommended tagline: "Cura means care." (cura is Latin for care), pending Michael.
 - **Breakdance design kit:** `website/breakdance-global-settings.md` maps the Cab Service pack's 6 palette slots, fonts and buttons to Cura, plus the CTA standard and the pack clean-up checklist.
 
+## Site build (2026-09-23)
+- Local site `https://cura-mobility.local` (LocalWP), Novamira MCP `novamira-cura-mobility-lo` (local scope). Site identity, favicon and America/Chicago are set.
+- Pixels **Cab Services** pages, header, footer and templates imported; the Cab Home is the front page. **Senior Care v2** pages imported as `SC –` drafts. The Cura global settings (palette, fonts, buttons) are applied. Details and IDs: `website/pixels-packs-import-notes.md`. Next: replace the demo content, logos, images and copy page by page.
+
 ## Photo library (2026-09-23)
 - In pCloud `05-Photos/`: 170 stock originals (107 Envato Elements + 63 Unsplash) with `stock/manifest.csv`, plus **159 SEO-named WebP web files** in `web/<page>/` with `web/image-map.csv` (alt text, use, license). See `05-Photos/README.md`. Register the Envato items to the Cura project before publishing. Gaps: real photos of Michael, his van and drivers; dialysis-specific scenes; side-ramp minivan.
 
