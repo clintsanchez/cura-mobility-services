@@ -18,7 +18,7 @@
 **Logo assets** (`brand/assets/`):
 - `svg/`: `cura-logo-stacked`, `-horizontal`, `-mark`, `-square`, `-wordmark`, each with an `-on-navy` variant
 - `png/`: `favicon.ico`, `favicon-32/48`, `apple-touch-icon-180`, `site-icon-512`, `gbp-avatar-720`, `social-avatar-navy-720`, `cura-logo-horizontal-1200` (+on-navy), `cura-logo-stacked-1200` (+on-navy)
-- `no-book/svg` + `no-book/png`: the identical set **without the open Bible** in the R (alternate; see §6 of this prompt)
+- `no-book/svg` + `no-book/png`: the identical set **without the open Bible** in the R (alternate; see §5 of this prompt)
 - `cura-logo-original.jpg`: the client's original raster (master reference)
 
 ---
