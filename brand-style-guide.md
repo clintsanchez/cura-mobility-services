@@ -45,6 +45,7 @@ This guide is for anyone who designs or writes for Cura: BlakSheep during the bu
     - Icons: `apple-touch-icon-180` and `site-icon-512` (WordPress Site Icon).
     - Avatars: `gbp-avatar-720` (Google profile) and `social-avatar-navy-720`.
     - Logos: transparent `cura-logo-horizontal-1200`, `cura-logo-stacked-1200` and their on-navy versions.
+  - `no-book/svg` + `no-book/png`: **the same full set without the open Bible**. The R is redrawn with a straight diagonal leg and the A with a symmetric left leg, with a proper gap between them. Use this set if Michael wants the faith element off (ask #9). The mark and icons are identical in both sets.
   - The trace is web-grade. ⏳ For print, signage or van wraps, get Michael's vector originals (ask #11) or budget a clean redraw. The logo appears AI-generated, so originals may not exist.
 - **Variations to produce** (from the vector, once available):
   - Full-color stacked (primary).

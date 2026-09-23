@@ -34,7 +34,7 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 
 ## Brand package (2026-09-22)
 - `brand/` package: `brand.yaml`, `context.md`, `voice.md`. `brand-style-guide.md` is rewritten (guidelines, contrast-checked palette, type, logo rules). `DESIGN.md` and `css-tokens.css` are synced.
-- **Logo set (2026-09-23):** `brand/assets/svg/` holds 10 SVGs (stacked, horizontal, mark, square and wordmark, each with an on-navy version; the swoosh has a real gradient). `brand/assets/png/` holds favicons, the site icon, avatars and transparent logos. All are web-grade; print still needs the originals or a redraw.
+- **Logo set (2026-09-23):** `brand/assets/svg/` holds 10 SVGs (stacked, horizontal, mark, square and wordmark, each with an on-navy version; the swoosh has a real gradient). `brand/assets/png/` holds favicons, the site icon, avatars and transparent logos. All are web-grade; print still needs the originals or a redraw. A **no-book version** of the full set is in `brand/assets/no-book/` (R and A redrawn), pending ask #9.
 - **Messaging:** `brand/messaging.md`. Recommended tagline: "Cura means care." (cura is Latin for care), pending Michael.
 - **Breakdance design kit:** `website/breakdance-global-settings.md` maps the Cab Service pack's 6 palette slots, fonts and buttons to Cura, plus the CTA standard and the pack clean-up checklist.
 
