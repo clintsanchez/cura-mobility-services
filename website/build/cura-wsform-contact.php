@@ -53,7 +53,7 @@ $ids = []; foreach ($o->groups[0]->sections[0]->fields as $f) $ids[$f->label] = 
 foreach ($o->meta->action->groups[0]->rows as $r) {
   $d = json_decode($r->data[1]);
   if ($d->id === 'email') {
-    $d->meta->action_email_to = [(object) ['action_email_email' => 'clint@blaksheepcreative.com', 'action_email_name' => 'Cura messages']];
+    $d->meta->action_email_to = [(object) ['action_email_email' => 'mveal72@yahoo.com', 'action_email_name' => 'Michael Veal']];
     $d->meta->action_email_from_name = 'Cura website';
     $d->meta->action_email_reply_to_email = '#field(' . $ids['Email'] . ')';
     $d->meta->action_email_subject = 'New message from #field(' . $ids['Name'] . ')';

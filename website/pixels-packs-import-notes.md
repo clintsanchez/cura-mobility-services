@@ -376,3 +376,24 @@
   The Estimate confirmation (43) is unused until the estimate form question is decided.
 - ⚠️ **Script note:** `cura-template.php` (the original Single Service build, from the now-trashed page 1307) predates this; re-running it would bring back the Breakdance sidebar form. Don't re-run it without updating it.
 - **API gotcha:** adding a field to an existing WS form via `db_update_from_object` overwrote another field's record. Rebuild forms from the script instead of patching fields in place.
+
+## Form routing: every form → its confirmation, emails → Michael (2026-09-24)
+- **All WS forms email mveal72@yahoo.com** (was clint@blaksheepcreative.com) and **redirect to their own confirmation**. On-page message actions are removed. Script: `website/build/cura-forms-routing.php` (form-level action meta only, idempotent).
+
+  | Form | Used on | Confirmation |
+  |---|---|---|
+  | Ride request 9 | Home, Book a ride, FAQs, service sidebars | /confirmation/ride-request/ |
+  | Contact us 11 | Contact page | /confirmation/contact/ |
+  | Email updates 3 | Footer sign-up | /confirmation/email-updates/ (**new**, 1519) |
+  | Request Quote 1 | /forms/quote/ | /confirmation/quote/ |
+  | **Free estimate 12** (new clone of form 1) | /forms/estimate/ | /confirmation/estimate/ |
+  | Free Consultation 5 | /forms/consultation/ | /confirmation/consultation/ |
+  | Request Appointment 2 | /forms/appointment/ | /confirmation/appointment/ |
+
+- The ride-request and contact build scripts now also use Michael's address, so re-runs keep it.
+- **Verified:** the footer sign-up and the estimate form each redirect to their confirmation (earlier tests covered ride request and contact). Test submissions deleted.
+- **Testing gotcha:** Breakdance entrance animations keep footer elements `visibility:hidden` (`.is-before`) until they're scrolled into view. Scroll before interacting in Playwright.
+- ⏳ **Email delivery:** LocalWP doesn't send real mail, so Michael won't get messages from the local site. On the live host:
+  - install or configure SMTP (e.g. the host's mailer or an SMTP plugin);
+  - set the From address to a curamobility.org mailbox, since forms use `#blog_admin_email` (clint@) as From;
+  - send a real test to mveal72@yahoo.com.

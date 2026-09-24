@@ -62,7 +62,7 @@ foreach ($act->groups[0]->rows as $r) {
     foreach ($qo->meta->action->groups[0]->rows as $qr) { $qd = json_decode($qr->data[1]); if ($qd->id === 'redirect') { $qd->meta->action_redirect_url = '/confirmation/ride-request/'; $r->data[0] = 'Confirmation Page'; $d = $qd; } }
   }
   if ($d->id === 'email') {
-    $d->meta->action_email_to = [(object) ['action_email_email' => 'clint@blaksheepcreative.com', 'action_email_name' => 'Cura ride requests']];
+    $d->meta->action_email_to = [(object) ['action_email_email' => 'mveal72@yahoo.com', 'action_email_name' => 'Michael Veal']];
     $d->meta->action_email_from_name = 'Cura ride request';
     $d->meta->action_email_reply_to_email = '#field(' . $ids['Your email'] . ')';
     $d->meta->action_email_subject = "New ride request from #field(" . $ids["Rider's name"] . ')';

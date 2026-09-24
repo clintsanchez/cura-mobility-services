@@ -53,6 +53,9 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - The 27 reviews are placeholders with synthetic headshots, not real riders. They're in review category **Sample** and show only on the local site (the visible tag was removed on 2026-09-23; the category guard stays). The live site hides the review sections until real reviews exist.
 - **Launch blocker:** delete the Sample reviews, then collect real ones through the GBP review ask. Never present the samples as genuine (CLAUDE.md guardrail, FTC 2024 rule).
 
+## Forms (2026-09-24)
+- All forms are WS Form. Each redirects to its own confirmation page (`confirmation` CPT: Hero title + Content fields). **Notifications go to Michael at mveal72@yahoo.com.** ⏳ Live site: set up SMTP and a curamobility.org From address, then send a real test. Map: `website/pixels-packs-import-notes.md` → "Form routing".
+
 ## Policies (2026-09-23)
 - The five policies are rewritten for Cura Mobility Services, LLC; the blueprint's other-client names and addresses are removed. ⏳ Before launch: Michael/attorney review, set the effective date to launch day, confirm the email domain, and trim the tool mentions to what's actually installed. Details: `website/pixels-packs-import-notes.md` → "Policies rewritten".
 
