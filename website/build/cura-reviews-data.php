@@ -40,7 +40,11 @@ foreach ($reviews as $i => [$name, $service, $body, $file]) {
   if (is_wp_error($id)) throw new Exception($id->get_error_message());
   update_post_meta($id, 'review_body', $body);
   update_post_meta($id, 'persons_name', $name);
-  update_post_meta($id, 'source', 'Sample placeholder');
+  // Sample source + rating (layout test data; samples never render off the local site).
+  $src = [['Google', 'fa-brands fa-google'], ['Facebook', 'fa-brands fa-facebook'], ['Google', 'fa-brands fa-google'], ['Yelp', 'fa-brands fa-yelp'], ['Google', 'fa-brands fa-google']][$i % 5];
+  update_post_meta($id, 'source', $src[0]);
+  update_post_meta($id, 'review_platform_icon', $src[1]);
+  update_post_meta($id, 'number_of_stars', ($i % 4 === 2) ? '4' : '5');
   update_post_meta($id, 'reviewer_avatar', $img);
   wp_set_object_terms($id, [$tid], 'review-categories');
   if (!MB_Relationships_API::has($id, $sid, 'review_to_service')) MB_Relationships_API::add($id, $sid, 'review_to_service');

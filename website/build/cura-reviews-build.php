@@ -30,8 +30,17 @@ $svcLine = cura_bd_el('PostsLoop', ['content' => ['repeated_block' => ['global_b
   'php' => "return ['post_type' => 'services', 'posts_per_page' => 1, 'relationship' => ['id' => 'review_to_service', 'from' => get_the_ID()]];",
   'custom' => ['source' => 'post_types', 'postsPerPage' => 1, 'conditions' => [[[]]], 'totalPosts' => null, 'ignoreStickyPosts' => true, 'ignoreCurrentPost' => false, 'postTypes' => ['services'], 'orderBy' => 'menu_order', 'order' => 'ASC', 'date' => 'all', 'beforeDate' => null, 'afterDate' => null, 'offset' => null, 'acfField' => null, 'metaboxField' => null]]]],
   'design' => ['list' => ['layout' => 'list', 'space_between_items' => ['number' => 0, 'unit' => 'px', 'style' => '0px']]], 'settings' => ['advanced' => ['classes' => ['cura-review-service-loop']]]]);
+// Rating row: platform icon (Meta Box icon field; its formatter returns inline SVG, Breakdance's field only the class)
+// + Breakdance Star Rating bound to number_of_stars, labelled with the source.
+$stars = cura_bd_dyn('metabox_field_number_of_stars'); $srcDyn = cura_bd_dyn('metabox_field_source');
+$rating = cura_bd_el('Div', ['settings' => ['advanced' => ['classes' => ['cura-review-rating']]]], [
+  cura_bd_el('CodeBlock', ['content' => ['content' => ['php_code' => "<?php \$i = rwmb_the_value('review_platform_icon', [], get_the_ID(), false); if (\$i) echo '<span class=\"cura-review-platform\" aria-hidden=\"true\">' . \$i . '</span>'; ?>"]]]),
+  cura_bd_el('StarRating', ['content' => ['components' => ['stars_max' => '5', 'stars' => '5', 'icon_type' => 'fontawesome', 'show_label' => true,
+    'rating' => $stars['shortcode'], 'rating_dynamic_meta' => $stars['meta'], 'label_text' => $srcDyn['shortcode'], 'label_text_dynamic_meta' => $srcDyn['meta']]]]),
+]);
 $card = cura_bd_el('Div', ['settings' => ['advanced' => ['classes' => ['cura-card', 'cura-review-card']]]], [
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Image', 'properties' => $img], 'children' => []],
+  $rating,
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Text', 'properties' => $bind($p(441), 'metabox_field_review_body')], 'children' => []],
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Heading', 'properties' => $bind($p(442), 'metabox_field_persons_name')], 'children' => []],
   // Service line: nested Post Loop of the service(s) connected to this review (Meta Box relationship),
@@ -79,7 +88,7 @@ $log['template_section'] = $sid;
 
 // 4. Styles.
 $gs = json_decode(json_decode(get_option('breakdance_global_settings_json_string')), true); $ss = $gs['settings']['code']['stylesheets'];
-$css = ".cura-review-card{display:flex;flex-direction:column;align-items:center;text-align:center}\n.cura-sample-tag{display:inline-block;margin-bottom:12px;padding:3px 10px;border-radius:999px;background:#FFF4D6;color:#6B4400;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}\n.cura-review-card .bde-text,.cura-review-card .bde-heading,.cura-review-card .bde-code-block{text-align:center;width:100%}\n.cura-review-card .bde-image{margin-inline:auto}\n.cura-review-card .cura-sample-tag{display:table;margin:0 auto 12px}\n.cura-review-service-loop{width:100%}";
+$css = ".cura-review-card{display:flex;flex-direction:column;align-items:center;text-align:center}\n.cura-sample-tag{display:inline-block;margin-bottom:12px;padding:3px 10px;border-radius:999px;background:#FFF4D6;color:#6B4400;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}\n.cura-review-card .bde-text,.cura-review-card .bde-heading,.cura-review-card .bde-code-block{text-align:center;width:100%}\n.cura-review-card .bde-image{margin-inline:auto}\n.cura-review-card .cura-sample-tag{display:table;margin:0 auto 12px}\n.cura-review-service-loop{width:100%}\n.breakdance .cura-review-card .cura-review-rating{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:8px;width:auto;margin:0 auto 15px}\n.breakdance .cura-review-card .cura-review-rating .bde-code-block{width:auto}\n.breakdance .cura-review-rating .bde-star-rating{display:flex;flex-direction:row;align-items:center;gap:8px}\n.breakdance .cura-review-rating .bde-star-rating__label{font-size:15px;font-weight:600;color:#02265A}\n.breakdance .cura-review-rating .bde-star-rating__wrapper svg{width:18px;height:18px}\n.cura-review-platform{display:flex}\n.cura-review-platform svg{width:18px;height:18px;fill:#02265A}";
 $pos = array_search('Cura: reviews', array_column($ss, 'name')); $e = ['name' => 'Cura: reviews', 'code' => $css];
 if ($pos === false) $ss[] = $e; else $ss[$pos] = $e;
 $gs['settings']['code']['stylesheets'] = $ss; \Breakdance\Data\save_global_settings(json_encode(['settings' => $gs['settings']]));

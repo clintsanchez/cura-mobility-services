@@ -162,6 +162,9 @@
   - Every review loop adds `tax_query NOT IN sample` unless `wp_get_environment_type() === 'local'`.
   - A Code Block in each section hides the section when its query is empty.
   - On the live site the sections therefore disappear until real reviews exist. Verified: the non-local query returns 0.
+- **Source and rating (2026-09-23):**
+  - Samples rotate `source` Google/Facebook/Yelp (16/6/5), with `review_platform_icon` set to the matching `fa-brands` icon and `number_of_stars` at 4 or 5 (20 five-star, 7 four-star). This is layout test data only; the local-only guard still applies.
+  - **On the card:** a centered row below the avatar. It holds a Code Block for the platform icon (`rwmb_the_value()` returns inline SVG; Breakdance's field returns only the FA class, and the site loads no Font Awesome CSS) and a Breakdance **Star Rating** element, with its rating bound to `metabox_field_number_of_stars` and its label to `metabox_field_source`.
 - **To add a real review:** create a Review post (not in Sample), fill the fields, and link its service. It shows everywhere automatically. Delete the 27 samples before launch.
 - **Scripts:** `website/build/cura-reviews-data.php` (+ `cura-reviews-list.php`) and `cura-reviews-build.php` (+ `review-card-props.json`).
 
