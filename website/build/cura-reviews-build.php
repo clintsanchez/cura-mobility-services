@@ -23,7 +23,7 @@ $guard = fn($args, $sectionClass) => cura_bd_el('CodeBlock', ['content' => ['con
 
 // 1. Review card global block (pack column 434 children, bound to review fields).
 $img = $p(440); $img['content']['content']['image'] = "[breakdance_dynamic field='metabox_image_reviewer_avatar']";
-$tag = cura_bd_el('CodeBlock', ['content' => ['content' => ['php_code' => "<?php if (has_term('sample', 'review-categories')) echo '<span class=\"cura-sample-tag\">Sample review</span>'; ?>"]]]);
+// Visible "Sample review" tag removed at Clint's request 2026-09-23 (samples stay local-only via $sampleGuard).
 $svcHead = $bind($p(443), 'post_title'); $svcHead['settings']['advanced']['classes'] = ['cura-loop-flush'];
 $svcBlk = cura_bd_block('Review service name', [['id' => 0, 'data' => ['type' => 'EssentialElements\\Heading', 'properties' => $svcHead], 'children' => []]]);
 $svcLine = cura_bd_el('PostsLoop', ['content' => ['repeated_block' => ['global_block' => $svcBlk], 'query' => ['query' => ['active' => 'php', 'text' => '',
@@ -31,7 +31,6 @@ $svcLine = cura_bd_el('PostsLoop', ['content' => ['repeated_block' => ['global_b
   'custom' => ['source' => 'post_types', 'postsPerPage' => 1, 'conditions' => [[[]]], 'totalPosts' => null, 'ignoreStickyPosts' => true, 'ignoreCurrentPost' => false, 'postTypes' => ['services'], 'orderBy' => 'menu_order', 'order' => 'ASC', 'date' => 'all', 'beforeDate' => null, 'afterDate' => null, 'offset' => null, 'acfField' => null, 'metaboxField' => null]]]],
   'design' => ['list' => ['layout' => 'list', 'space_between_items' => ['number' => 0, 'unit' => 'px', 'style' => '0px']]], 'settings' => ['advanced' => ['classes' => ['cura-review-service-loop']]]]);
 $card = cura_bd_el('Div', ['settings' => ['advanced' => ['classes' => ['cura-card', 'cura-review-card']]]], [
-  $tag,
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Image', 'properties' => $img], 'children' => []],
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Text', 'properties' => $bind($p(441), 'metabox_field_review_body')], 'children' => []],
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Heading', 'properties' => $bind($p(442), 'metabox_field_persons_name')], 'children' => []],

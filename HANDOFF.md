@@ -50,7 +50,7 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - Details and IDs: `website/pixels-packs-import-notes.md` → "Dynamic phase". Build scripts: `website/build/`.
 
 ## Reviews (2026-09-23): 🚨 SAMPLE placeholders
-- The 27 reviews are placeholders with synthetic headshots, not real riders. They're in review category **Sample** and show only on the local site, each tagged "Sample review". The live site hides the review sections until real reviews exist.
+- The 27 reviews are placeholders with synthetic headshots, not real riders. They're in review category **Sample** and show only on the local site (the visible tag was removed on 2026-09-23; the category guard stays). The live site hides the review sections until real reviews exist.
 - **Launch blocker:** delete the Sample reviews, then collect real ones through the GBP review ask. Never present the samples as genuine (CLAUDE.md guardrail, FTC 2024 rule).
 
 ## Photo library (2026-09-23)
