@@ -229,3 +229,14 @@
     - Required and error marks: #B91C1C.
     - Checkboxes and radios are drawn on the input (`appearance:none`), so they get a gray #7A8594 edge, a 4px radius, and navy when checked.
     - This WS Form version uses the newer Styles/CSS-variable system. The legacy skin options were also set to the Cura palette, but they aren't what renders.
+
+## Sentence case pass (2026-09-23)
+- **Decision:** headings, titles and labels stay in **sentence case**, per the brand guide (readability for older riders, the warm voice, and one simple rule for editors). Proper nouns keep their capitals.
+- **Normalised:**
+  - Page titles: About us, Contact us, Book a ride.
+  - Form and confirmation titles: Free quote, Free estimate, Free consultation, Request an appointment.
+  - Policy titles: Privacy policy, Terms and conditions, Cookie policy, Website disclaimer, Accessibility statement.
+  - WS Form field labels (18 fields: First name, Last name, Email address, Address line 1/2, Postal code, ZIP code, How can we help you?, Your inquiry), plus the "Address Line1" typo. All 5 forms republished.
+  - Slugs are unchanged.
+- The Breakdance headings were already sentence case; a scan found no title-case holdouts.
+- **Footer "Privacy policy"** was pointing at the WordPress default page 3 (`/privacy-policy/`, published and **empty**). It now links to `/policies/privacy-policy/`, and page 3 is set to draft. `wp_page_for_privacy_policy` still points at page 3.
