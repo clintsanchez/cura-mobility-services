@@ -277,8 +277,8 @@
 ## Footer bar: BlakSheep standard (2026-09-23)
 - Footer 244 bottom bar (section 143 > Columns 172, class `cura-footer-bar`), matching tigertownconstruction.com:
   1. **Copyright:** dynamic year, "© 2026 Cura Mobility Services. All rights reserved." (existing text 176).
-  2. **Links:** privacy · cookies · terms · accessibility · sitemap → `/policies/*/` and `/sitemap/`.
-  3. **Credit:** "Powered by" plus the white BlakSheep logo SVG (attachment 1512, alt "Website & SEO by BlakSheep Creative"). It links to https://blaksheepcreative.com/services/web-design-development/baton-rouge/ in a new tab; BSC has no healthcare industry page.
+  2. **Links:** Privacy · Cookies · Terms · Accessibility · Sitemap (capitalized, not all caps) → `/policies/*/` and `/sitemap/`.
+  3. **Credit:** "Powered by" plus the **all-white** BlakSheep logo SVG (attachment 1514; `brand/assets/credits/blaksheep-creative-all-white.svg`, made from BSC's logo with the #61CE70 wordmark set to white; alt "Website & SEO by BlakSheep Creative"). It links to https://blaksheepcreative.com/services/web-design-development/baton-rouge/ in a new tab; BSC has no healthcare industry page.
 - **New Sitemap page** `/sitemap/` (1513): Single Policy layout with the SEOPress HTML sitemap (`[seopress_html_sitemap]`, Breakdance Shortcode element). It lists 30 links.
 - The SVG is registered directly as an attachment (WP blocks SVG uploads). Source: `brand/assets/credits/blaksheep-creative-white.svg`.
 - Global stylesheet **"Cura: footer bar"**: flex space-between, white text, stacked on mobile.
