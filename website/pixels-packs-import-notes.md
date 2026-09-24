@@ -319,3 +319,9 @@
 - **Gotchas:**
   - When cloning a WS form object, don't strip `id` recursively. Data-grid options need their column and row ids, or the options render blank.
   - `label_render` off hides a submit button's text.
+- **Ride request forms swapped to WS Form (2026-09-23):**
+  - Home 158, Book a ride 123 and FAQs 161 were Breakdance FormBuilders. Each is now a Shortcode element (same node id, class `cura-ride-form`) with `[ws_form id="8"]`.
+  - The white card is on the parent Div (25px padding, 20px radius, shadow), so the layout is unchanged.
+  - Verified on all three: WS form present, fields 333/507 wide, options populated, 25px card padding top and bottom. No Breakdance ride forms remain.
+  - Added `body .wsf-form .wsf-tile.wsf-bottom{margin-bottom:0}` to "Cura: WS Form": WS spaces rows with a bottom margin on every tile, which left 41px under the button.
+  - The footer "Stay in touch" sign-up is still a Breakdance form.
