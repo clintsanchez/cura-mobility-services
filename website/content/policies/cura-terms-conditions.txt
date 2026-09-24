@@ -1,0 +1,45 @@
+<strong>Effective date:</strong> September 23, 2026
+These Terms and conditions ("Terms") govern your use of the Cura Mobility Services website and the pages, forms and communications provided through it. By using this website, you agree to these Terms. If you do not agree, please do not use the website.
+## About Cura Mobility Services
+Cura Mobility Services, LLC ("Cura Mobility Services," "we," "us," or "our") provides non-emergency medical transportation and everyday rides in the Baton Rouge area, including rides to medical appointments, dialysis, treatment and therapy, hospital discharges and pharmacies.
+## Not an emergency service
+We do not provide emergency medical transportation or medical care. Our drivers are not medical providers. <strong>For a medical emergency, call 911.</strong>
+## How rides are booked
+Submitting a form or request through this website does not book or confirm a ride. A ride is confirmed only when we call you and confirm the pickup time, ride type and price. Until then, we cannot guarantee availability for a requested date or time.
+## Pricing
+Prices depend on the distance, the type of ride, any wait time and other trip details. Any pricing information on this website is general. We give you the price for your ride before you book.
+## Health plans, Medicare and Medicaid
+Information on this website about Medicare, Medicaid or other health plans is general information only. Coverage for rides depends on your plan. Please check with your plan about what it covers. We do not guarantee that any plan will pay for or reimburse a ride.
+## Using this website
+You may use this website only for lawful purposes. You agree not to:
+- Submit false, misleading or fraudulent information
+- Request a ride for someone without their permission or the permission of their caregiver or legal representative
+- Try to gain unauthorized access to the website or its systems
+- Interfere with the operation or security of the website
+- Use bots, scrapers or other automated tools to copy the website without permission
+- Send spam, malicious code or harmful material through the website
+## Information you submit
+When you submit information through the website, you confirm that it is accurate to the best of your knowledge and that you have the right to share it. Please share only the details we need to plan a ride. Do not send medical records through the website.
+## Privacy
+Your use of the website is also covered by our <a href="/policies/privacy-policy/">Privacy policy</a>, which explains how we collect, use and share personal information.
+## Third-party tools and links
+We use third-party tools to run the website, such as form, analytics, hosting and spam protection services. The website may also link to other websites. We are not responsible for the content, policies or availability of third-party tools or websites.
+## Intellectual property
+The content on this website, including text, design, logos, graphics and images, is owned by Cura Mobility Services or used with permission. You may view and print pages for your own personal, non-commercial use. You may not copy, republish or use website content for commercial purposes without our written permission.
+## Disclaimer of warranties
+This website and its content are provided "as is" and "as available." To the fullest extent the law allows, we make no warranties of any kind, express or implied, about the website, including warranties of accuracy, availability, merchantability or fitness for a particular purpose. We do not promise that the website will be uninterrupted, error-free or free of harmful components.
+## Limitation of liability
+To the fullest extent the law allows, Cura Mobility Services and its owners, employees, drivers and contractors will not be liable for any indirect, incidental, consequential, special or punitive damages arising from your use of, or inability to use, this website. These Terms cover your use of the website. They do not limit any rights you have under the law for rides we provide.
+## Indemnification
+You agree to defend and hold harmless Cura Mobility Services and its owners, employees and contractors from claims, losses and expenses, including reasonable attorneys' fees, that arise from your misuse of the website or your violation of these Terms or the law.
+## Changes to the website and these Terms
+We may update, suspend or change any part of the website at any time. We may also update these Terms. When we do, we will change the effective date above. Continuing to use the website after changes are posted means you accept the updated Terms.
+## Governing law
+These Terms are governed by the laws of the State of Louisiana. Any dispute about these Terms or the website will be handled in the state or federal courts located in Louisiana, unless the law requires otherwise.
+## Severability
+If any part of these Terms is found to be invalid or unenforceable, the rest of the Terms will stay in effect.
+## Entire agreement
+These Terms, together with our Privacy policy and any other notices posted on the website, are the entire agreement between you and Cura Mobility Services about your use of the website.
+## Contact us
+If you have questions about these Terms, please contact us:
+@@CONTACT@@

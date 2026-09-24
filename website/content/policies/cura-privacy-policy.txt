@@ -1,0 +1,72 @@
+<strong>Effective date:</strong> September 23, 2026
+Cura Mobility Services, LLC ("Cura Mobility Services," "we," "us," or "our") respects your privacy. This Privacy Policy explains what information we collect through this website, our forms and our phone calls with you, how we use it, when we share it, and the choices you have.
+We provide non-emergency medical transportation and everyday rides in the Baton Rouge area. To plan a safe ride, we need some details about the rider and the trip. We ask only for what we need.
+## Information we collect
+### Information you give us
+When you request a ride, send us a message, call us or sign up for updates, we may collect:
+- The rider's name, and your name if you are booking for someone else
+- Phone number and email address
+- Pickup address and destination, such as a clinic, hospital, pharmacy or home
+- Appointment date and time, and whether you need a one-way, round trip or recurring ride
+- Mobility needs, such as a wheelchair, walker, cane or scooter, and the kind of help the rider needs getting in and out of the vehicle
+- Whether a family member or caregiver will ride along
+- Anything else you choose to tell us in a form, a message or a call
+### Health-related details
+Some ride details can relate to a person's health, such as the type of appointment or the mobility aid a rider uses. We use these details only to plan and provide the ride. We do not ask for medical records, diagnoses or insurance numbers through this website. Please share only what we need to plan the ride.
+### Information collected automatically
+When you visit the website, we and the tools we use may collect:
+- IP address, browser type and device type
+- Pages you view and actions you take on the site
+- The page or site that referred you
+- Date and time of your visit
+- General location based on your IP address
+- Cookie identifiers and similar technical data
+## How we use your information
+We use the information we collect to:
+- Plan, schedule and provide rides, including recurring ride schedules
+- Call you to confirm pickup times, ride types, mobility needs and pricing
+- Answer your questions and respond to messages
+- Send updates you have asked to receive
+- Operate, secure and improve the website and our forms
+- Understand how visitors use the website
+- Prevent spam, fraud and misuse
+- Keep business records and meet legal obligations
+## How we share information
+We do not sell your personal information. We may share information:
+- With our drivers and staff who need it to provide your ride
+- With a family member, caregiver or care facility you ask us to coordinate with
+- With service providers that help us run the website, forms, email, hosting, analytics and security, who may use it only to provide those services to us
+- When the law requires it, such as in response to a subpoena or court order
+- To protect the safety of riders, drivers or the public, or to protect our rights
+- As part of a sale, merger or reorganization of our business, if that happens
+## Cookies and similar technologies
+We use cookies and similar technologies to run the website, remember preferences, protect our forms and understand how the site is used. You can manage cookies in your browser settings. Learn more in our <a href="/policies/cookie-policy/">Cookie policy</a>.
+## Website tools
+We may use the following tools. Each may process technical or form-related data to provide its service.
+### Website forms
+We use WS Form and the forms built into our website to receive ride requests and messages. Information you submit may be stored in our website, sent to us by email and processed by providers that support our website and email.
+### Google Analytics
+We may use Google Analytics to understand how visitors use the website. We do not knowingly send information that identifies you personally to Google Analytics.
+### Spam protection
+We may use tools such as Google reCAPTCHA to protect our forms from spam and automated abuse. These tools may collect device and interaction data.
+### Advertising measurement
+If we advertise online, we may use tools such as the Meta Pixel to measure how well our ads work. These tools may set cookies and share website activity data with the advertising platform.
+## Your choices
+- You can ask us what personal information we have about you
+- You can ask us to correct or delete your information, subject to records we must keep
+- You can ask us to stop sending you email updates at any time
+- You can block or delete cookies in your browser settings
+To make a request, call us or email us using the details below. We may need to confirm your identity before we act on a request. Depending on where you live, you may have additional rights under state law, and we will honor those rights where they apply.
+## How long we keep information
+We keep personal information for as long as we reasonably need it to provide rides, keep business records, resolve disputes and meet legal obligations. Then we delete it or keep it in a form that no longer identifies you.
+## How we protect information
+We use reasonable administrative, technical and physical safeguards to protect personal information. No website, email or method of storing data is completely secure, so we cannot guarantee absolute security.
+## Children's privacy
+This website is meant for adults. We do not knowingly collect personal information from children under 13 through the website. A parent or guardian may book a ride for a minor by calling us. If you believe a child has given us personal information through the website, please contact us so we can remove it.
+## Links to other websites
+Our website may link to other websites, such as health plans or map services. We are not responsible for their privacy practices. Please review their privacy policies before sharing information with them.
+## Changes to this policy
+We may update this Privacy Policy from time to time. When we do, we will change the effective date above. Continuing to use the website after changes are posted means you accept the updated policy.
+## Contact us
+If you have questions about this Privacy Policy or want to make a privacy request, please contact us:
+@@CONTACT@@

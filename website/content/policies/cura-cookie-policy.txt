@@ -1,0 +1,41 @@
+<strong>Effective date:</strong> September 23, 2026
+This Cookie policy explains how Cura Mobility Services, LLC ("Cura Mobility Services," "we," "us," or "our") uses cookies and similar technologies on this website. Please read it together with our <a href="/policies/privacy-policy/">Privacy policy</a>.
+## What are cookies?
+Cookies are small text files that a website saves on your device. They help the website work, remember your settings, protect forms and show how the site is used. Websites may also use similar technologies, such as pixels, tags, scripts and local storage.
+## How we use cookies
+We use cookies and similar technologies to run the website, protect our ride request and contact forms, remember your preferences and understand how visitors use the site. If we advertise online, we may also use them to measure how well our ads work.
+## Types of cookies we use
+### Necessary cookies
+These cookies keep the website working and secure. They support things like form submissions and spam protection. The website may not work properly without them.
+### Functional cookies
+These cookies remember choices you make and help forms and other features work smoothly.
+### Analytics cookies
+These cookies help us understand which pages visitors use and how we can improve the website.
+### Advertising and measurement cookies
+If we advertise online, these cookies help us measure the results of our ads.
+## Tools that may set cookies
+### Google Analytics
+We may use Google Analytics to understand how visitors use the website. It uses cookies such as _ga to tell visits and visitors apart.
+### Google reCAPTCHA
+We may use Google reCAPTCHA on our forms to block spam and automated abuse. It may set a necessary cookie such as _GRECAPTCHA.
+### Meta Pixel
+If we advertise on Facebook or Instagram, we may use the Meta Pixel to measure actions taken on our website after someone sees an ad.
+### Website forms
+Our ride request and contact forms, built with WS Form and our website builder, may use session or functional cookies to process your submission.
+## Examples of cookies
+The cookies on the website can change as the site and its tools change. This table shows common examples.
+| Cookie or technology | Provider | Type | Purpose | How long it lasts
+| _ga | Google Analytics | Analytics | Tells visitors and visits apart | Up to 2 years, depending on settings
+| _ga_* | Google Analytics | Analytics | Keeps track of the current visit | Varies by settings
+| _GRECAPTCHA | Google reCAPTCHA | Necessary | Helps block spam and bots | Varies
+| Meta Pixel identifiers | Meta | Advertising and measurement | Measures actions after an ad | Varies by browser and settings
+| Form session cookies | Our website and WS Form | Functional | Helps forms validate and submit | Usually ends when you close your browser
+## How to manage cookies
+You can block or delete cookies in your browser settings. Most browsers let you refuse all cookies or only some. Blocking some cookies may affect how the website works, including our forms.
+## Third-party cookies
+Some cookies are set by the providers of tools we use, such as Google and Meta. Their own privacy and cookie policies apply to how they use data. We encourage you to review them.
+## Changes to this policy
+We may update this Cookie policy when our website or tools change. When we do, we will change the effective date above.
+## Contact us
+If you have questions about our use of cookies, please contact us:
+@@CONTACT@@

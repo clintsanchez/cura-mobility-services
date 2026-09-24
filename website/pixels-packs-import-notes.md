@@ -285,3 +285,19 @@
 - **Gotcha:** the Image element's link uses `{link_type:'url', url, new_tab:true}`, not the Button's `{type, openInNewTab}`.
 - Script: `website/build/cura-footer-bar.php`.
 - **Footer Helpful links:** "Privacy policy" (button 130) removed on 2026-09-23; the bottom bar now carries the policy links.
+
+## Policies rewritten for Cura (2026-09-23)
+- All five policies (Privacy 47, Terms 48, Cookie 49, Website disclaimer 1195, Accessibility 1198) are rewritten for **Cura Mobility Services, LLC**. The blueprint text named "PinkLine Systems" (CRM/automation, with BlakSheep's office address as its map link) and "Chronicle Jets, LLC" (jet charter broker, with a private Ocala address and a personal Gmail). All of that is removed.
+- **Cura-specific content:**
+  - What a ride request collects (rider/caregiver, pickup/destination, appointment times, mobility needs). Health-related details are used only to plan the ride; no medical records, diagnoses or insurance numbers are requested; no HIPAA claims.
+  - Not an emergency service (call 911). The website doesn't book a ride; rides are confirmed by phone with the price before booking. Drivers are not medical providers.
+  - Medicare/Medicaid information is general only, so check your plan. Reviews reflect individual experiences.
+  - Accessibility: WCAG 2.2 AA as the guide, and you can always book by phone.
+- **Removed:** the California (CCPA) sections, replaced with a general "Your choices" section.
+- **Contact block:** Cura Mobility Services, LLC · Serving the Baton Rouge area · phone · info@curamobility.org. No street address (records-check guardrail) and no website line, to avoid baking in the local domain.
+- Gutenberg blocks (headings, lists, a table) so the policies stay editable. Sources and generated HTML are in `website/content/policies/`. Each policy has an excerpt; the unused `hero_image` meta was removed.
+- ⏳ **Before launch:**
+  1. Michael (and ideally an attorney) reviews all five.
+  2. Update the **effective date** (currently September 23, 2026) to the launch date.
+  3. Confirm the **info@curamobility.org** domain.
+  4. Trim the "may use" tool mentions (Google Analytics, reCAPTCHA, Meta Pixel) to what's actually installed.
