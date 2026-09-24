@@ -217,3 +217,15 @@
     - Estimate uses the Quote form, so it redirects to the Quote confirmation.
     - The WS Form fields are generic blueprint fields (address, "new client?"), not Cura's ride-request fields.
     - WS Form's default skin (black-bordered inputs) doesn't match the site's forms yet.
+- **Form ledes and styling (2026-09-23):**
+  - Each form post's **excerpt** is its lede, shown between the title and the form (`.cura-form-lede`, 18px/1.6):
+    - Quote: "Tell us about the ride you need. We will call you with a clear price before anything is booked."
+    - Estimate: "…we will get back to you with an estimate for the ride."
+    - Consultation: "Not sure which ride fits?…"
+    - Appointment: "Let us know when you would like to talk…"
+  - **WS Form styled to match the site's Breakdance forms** via the global stylesheet **"Cura: WS Form"**, which sets WS Form's own `--wsf-*` CSS variables on `body .wsf-form` and so applies to every WS form:
+    - Fields: #F3F6F9 fill and border, 10px radius, 12px/16px padding, navy text and 500-weight labels, 16px grid gap. Focus: white with a Teal Deep border and ring.
+    - Button: navy, 17px/600, 10px radius, Teal Deep on hover.
+    - Required and error marks: #B91C1C.
+    - Checkboxes and radios are drawn on the input (`appearance:none`), so they get a gray #7A8594 edge, a 4px radius, and navy when checked.
+    - This WS Form version uses the newer Styles/CSS-variable system. The legacy skin options were also set to the Cura palette, but they aren't what renders.

@@ -89,7 +89,7 @@ $log['policy'] = $template('Single Policy', 'policies', $t);
 // ---- Single Form ---------------------------------------------------------------------------------
 $l = $label; $l['content']['content']['text'] = 'Request form';
 $h = $h2; $h['content']['content'] = array_merge($h['content']['content'], $dynText('post_title'));
-$intro = $body; $intro['content']['content'] = $dynText('post_excerpt');
+$intro = $body; $intro['content']['content'] = $dynText('post_excerpt'); $intro['settings']['advanced']['classes'] = ['cura-form-lede'];
 $form = ['content' => ['content' => $dynText('post_content')], 'settings' => ['advanced' => ['classes' => ['cura-form-embed']]]];
 $t = $build($img('home-booking/daughter-and-senior-mother-looking-at-phone.webp', 'Adult daughter and her senior mother smiling at a phone together on the sofa'),
   'Our services', 'services', [$node('Text', $l), $node('Heading', $h), $node('Text', $intro), $node('Text', $form)]);
