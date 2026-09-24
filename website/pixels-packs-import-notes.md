@@ -325,3 +325,11 @@
   - Verified on all three: WS form present, fields 333/507 wide, options populated, 25px card padding top and bottom. No Breakdance ride forms remain.
   - Added `body .wsf-form .wsf-tile.wsf-bottom{margin-bottom:0}` to "Cura: WS Form": WS spaces rows with a bottom margin on every tile, which left 41px under the button.
   - The footer "Stay in touch" sign-up is still a Breakdance form.
+- **Footer sign-up swapped to WS Form (2026-09-24):**
+  - Footer 244 node 142 (Breakdance FormBuilder, "Email updates") is now a Shortcode element (class `cura-footer-signup`) with `[ws_form id="3"]`. That's the blueprint's Newsletter Signup, updated in place and renamed **Email updates**:
+    - Field: email, required, label hidden (`aria-label` "Email"), placeholder "Enter your email" (sentence case; was "Enter Email").
+    - Button: "Sign up".
+    - Both fields full width; the blueprint's 9/3 side-by-side split at the largest breakpoint was cleared.
+    - Actions: save; message "Thank you. You are on the list."; email to clint@blaksheepcreative.com ⏳ with subject "New email sign-up" and reply-to the subscriber.
+  - "Cura: WS Form" gains `.cura-footer-signup` rules for the original's 10px field-to-button gap.
+  - **Verified:** matches the original (246×46 field, 246×47 button, 10px gap). A test sign-up showed the success message and was deleted. **No Breakdance forms remain on the site**; all forms are WS Form.
