@@ -144,3 +144,16 @@ Business-startup queries ("how to start a transportation business"), jobs, van s
 2. Pull volumes for the ~30 map keywords from Google Keyword Planner, or wait for SE Ranking credits.
 3. ~~Review Mitresonz~~ done. Her site is a single thin GoDaddy page; her Maps lead comes from reviews alone. Worth asking Michael whether his consultant will share her review-request process.
 4. Draft the sitemap and homepage brief from section 3 (hub plus senior and FAQ pages can start now; the rest wait on client answers).
+
+---
+
+## 9. On-page metadata set (2026-09-24)
+- **SEOPress title, description, OG title, OG description and OG image** set for all 27 indexed URLs: 9 pages, 9 services, 5 policies, 4 form pages. Twitter mirrors OG. Source: `website/build/cura-seo-meta.php`; apply with `cura-seo-apply.php`.
+- **Titles:** keyword first, then "| Cura", all ≤60 characters, sentence case. **Descriptions:** ≤160 characters, each ending with a price-before-booking line or the phone number.
+- **Targets:** home = "non-emergency medical transportation in Baton Rouge"; each service page = its §3 keyword ("dialysis transportation in Baton Rouge", "wheelchair transportation…", "hospital discharge transportation…", "senior transportation…"). Wording follows the §7 rules (no provider, licensing, statewide or equipment claims).
+- **OG images:** 17 unique 1200×630 JPG center crops (`*-og.jpg`), made from each page's banner or the service's featured image.
+- **Excerpts:** set for the 9 pages. The service, policy and form excerpts already existed and are used on the site (card text, policy summaries, form ledes), so they were kept.
+- **Noindex:**
+  - Post types: **confirmation** (noindex, nofollow), plus the loop-only and unused faqs, review, team, locations and products.
+  - Taxonomies: faq-categories, review-categories, service-categories. All are dropped from the XML sitemap.
+  - The sitemap now covers posts, pages, services, policies and forms. Verified in the rendered `<head>` and `/sitemaps.xml`.
