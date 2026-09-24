@@ -81,6 +81,11 @@ $swap = function (&$node) use (&$swap, $blk, $svcArgs, $loopNode, $guard, $sid, 
   unset($c);
 };
 $swap($sec);
+// The pack's card row hangs 100px into the next section (Div margin-bottom -100px, section padding-bottom 0).
+// On Home the next section absorbs it; on the service template the footer CTA follows, so close the section normally.
+$sec['data']['properties']['design']['spacing']['padding']['breakpoint_base']['bottom'] = ['number' => 70, 'unit' => 'px', 'style' => '70px'];
+foreach ($sec['children'] as &$c) { if (isset($c['data']['properties']['design']['spacing']['margin_bottom'])) $c['data']['properties']['design']['spacing']['margin_bottom'] = ['breakpoint_base' => ['number' => 0, 'unit' => 'px', 'style' => '0px']]; }
+unset($c);
 $idx = null; foreach ($tt['root']['children'] as $k => $c) if ($c['id'] == 108) $idx = $k;
 array_splice($tt['root']['children'], $idx + 1, 0, [$sec]);
 cura_bd_save($tpl, $tj, $tt);

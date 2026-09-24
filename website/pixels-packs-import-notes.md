@@ -262,3 +262,13 @@
   - The build scripts and service content file are patched too, so re-runs stay clean.
 - **Rule:** a button or link names its one action. `tel:` → "Call" / "Call (225) 363-0845". No texting language anywhere on this site.
 - **Verified:** a rendered-HTML crawl of 20 URLs finds no `sms:`, "text us", "call or text" or Text buttons.
+
+## FAQs x5, no Gutenberg, reviews spacing (2026-09-23)
+- **5 FAQs per service** (45 service FAQs + 9 General = 54). 2 new per service are in `website/build/cura-faqs-extra.php`, linked via `faq_to_service` and ordered 1–5. The copy sticks to claims already on the site (no vehicle equipment, contracts, pricing or schedule promises), and hospital discharge adds "drivers do not provide medical care".
+- **No Gutenberg on Services or FAQs:**
+  - The `editor` support is removed from both CPTs (Meta Box post types 31 and 19).
+  - New **Intro** field (wysiwyg) is the first field in Service Content. Each service's intro moved there, and `post_content` is emptied.
+  - FAQ answers use the blueprint's existing **Answer** field.
+  - Bindings: Single Service text 129 → `metabox_field_intro`; the **FAQ answer** block (1386) → `metabox_field_answer`, which covers the service FAQ loops and the FAQs page.
+- **Data-script fix:** `cura-data.php` still read each service's card text and icon from the Services page's old static icon boxes. Those are now a loop, so a run blanked the excerpts and icons. It was caught in the same session and restored. The card text and icons now live in the script (`$cards`), and General FAQs are only upserted from an optional `cura-faqs-general.php`.
+- **Reviews overhang:** the pack's review row uses a `-100px` bottom margin with a 0 bottom-padding section, which is meant to hang into the next section. Home keeps it (the next section absorbs it; 70px clear). The **Single Service template's** copy now has 70px bottom padding and no negative margin, so it no longer covers the footer CTA (set in `cura-reviews-build.php`).

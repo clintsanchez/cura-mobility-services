@@ -25,7 +25,7 @@ $il['settings']['advanced']['classes'] = ['cura-loop-flush'];
 $blkHl = cura_bd_block('Service highlight', [['id' => 0, 'data' => ['type' => 'EssentialElements\\IconList', 'properties' => $il], 'children' => []]]);
 
 // FAQ answer: Text bound to the FAQ post content.
-$pc = $dyn('post_content');
+$pc = $dyn('metabox_field_answer'); // FAQ Answer field (no Gutenberg)
 $blkFaq = cura_bd_block('FAQ answer', [cura_bd_el('Text', ['content' => ['content' => ['text' => $pc['shortcode'], 'text_dynamic_meta' => $pc['meta']]], 'settings' => ['advanced' => ['classes' => ['cura-faq-answer']]]])]);
 $log['blocks'] = compact('blkLink', 'blkHl', 'blkFaq');
 
@@ -41,7 +41,7 @@ $S(100, 'design.background.image.breakpoint_base', "[breakdance_dynamic field='m
 $S(127, 'content.content.image', "[breakdance_dynamic field='post_featured_image']");
 // Main-column title (128) removed 2026-09-23: the banner H1 already shows the title.
 cura_bd_remove($t['root'], 128);
-$pc = $dyn('post_content'); $S(129, 'content.content.text', $pc['shortcode']); $S(129, 'content.content.text_dynamic_meta', $pc['meta']);
+$in = $dyn('metabox_field_intro'); $S(129, 'content.content.text', $in['shortcode']); $S(129, 'content.content.text_dynamic_meta', $in['meta']); // Intro field (no Gutenberg)
 $S(131, 'content.content.image', "[breakdance_dynamic field='metabox_image_detail_image']");
 
 // Sidebar: services loop replaces the 9 static buttons (heading 115 stays)
