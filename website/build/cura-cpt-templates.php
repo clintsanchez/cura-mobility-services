@@ -96,16 +96,17 @@ $t = $build($img('home-booking/daughter-and-senior-mother-looking-at-phone.webp'
   'Our services', 'services', [$node('Text', $intro), $node('Text', $form)]);
 $log['form'] = $template('Single Form', 'forms', $t);
 
-// ---- Single Confirmation (the form layout, with a thank-you) ------------------------------------------
-$l = $label; $l['content']['content'] = $dynText('post_title');
-$h = $h2; unset($h['content']['content']['text_dynamic_meta']); $h['content']['content']['text'] = 'Thank you. We got your request.'; $h['content']['content']['tags'] = 'h2';
-$msg = $body; $msg['content']['content'] = ['text' => '<p>We will call you soon to confirm the details.</p><p><strong>What happens next</strong></p><ol><li>We review your request.</li><li>We call you to confirm the pickup, the ride type and any mobility needs.</li><li>You get a clear price before anything is booked.</li></ol><p>Need us sooner? Call <a href="tel:+12253630845">(225) 363-0845</a>. For a medical emergency, call 911.</p>'];
+// ---- Single Confirmation (the form layout; hero title + content from the Confirmation Content fields) --------
+// conf_h1 -> banner H1 (breadcrumb keeps the short post title); conf_content (wysiwyg) -> main column, then buttons.
+$msg = $body; $msg['content']['content'] = $dynText('metabox_field_conf_content');
 $msg['settings']['advanced']['classes'] = ['cura-prose'];
 $home = $cta; $home['content']['content']['text'] = 'Back to home'; $home['content']['content']['link'] = ['type' => 'url', 'url' => home_url('/')];
 $call = $cta;
 $btns = ['id' => 0, 'data' => ['type' => 'EssentialElements\\Div', 'properties' => ['settings' => ['advanced' => ['classes' => ['cura-button-row']]]]], 'children' => [$node('Button', $home), $node('Button', $call)]];
 $t = $build($img('home-rider/senior-woman-laughing-as-car-passenger.webp', 'Senior woman laughing while riding as a passenger in a car'),
-  'Our services', 'services', [$node('Text', $l), $node('Heading', $h), $node('Text', $msg), $btns]);
+  'Our services', 'services', [$node('Text', $msg), $btns]);
+$h1 = $dynText('metabox_field_conf_h1');
+cura_bd_set($t, 104, 'content.content.text', $h1['text']); cura_bd_set($t, 104, 'content.content.text_dynamic_meta', $h1['text_dynamic_meta']);
 $log['confirmation'] = $template('Single Confirmation', 'confirmation', $t);
 
 // ---- Styles --------------------------------------------------------------------------------------

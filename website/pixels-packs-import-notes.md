@@ -333,3 +333,15 @@
     - Actions: save; message "Thank you. You are on the list."; email to clint@blaksheepcreative.com ⏳ with subject "New email sign-up" and reply-to the subscriber.
   - "Cura: WS Form" gains `.cura-footer-signup` rules for the original's 10px field-to-button gap.
   - **Verified:** matches the original (246×46 field, 246×47 button, 10px gap). A test sign-up showed the success message and was deleted. **No Breakdance forms remain on the site**; all forms are WS Form.
+
+## Confirmation template: custom fields (2026-09-24)
+- **Confirmation Content** Meta Box group (1516) on the `confirmation` CPT, with the same field names as the Tiger Town build:
+  - **Hero title** `conf_h1` (text, required): the banner H1. The post title stays in the breadcrumb and admin.
+  - **Content** `conf_content` (wysiwyg): the thank-you message and next steps.
+- **Single Confirmation (1489)** keeps the Form template layout (banner, then 66/33 with the sticky contact card and service links):
+  - banner H1 104 → `metabox_field_conf_h1`;
+  - main column → `metabox_field_conf_content` (`.cura-prose`), then the Back to home and Call buttons.
+  - The template's hard-coded thank-you copy is removed.
+- **Content** is set for quote 44, estimate 43, consultation 42 and appointment 41: a lead line, "What happens next" with 3 steps, and the call and 911 line. Call-only, no new promises.
+- **Scripts:** `website/build/cura-confirmations.php` (fields and content) and `cura-cpt-templates.php` (template).
+- **Verified:** all 4 confirmations render the hero title as the only H1, the breadcrumb with the post title, 3 steps, both buttons and the sidebar.
