@@ -397,3 +397,4 @@
   - install or configure SMTP (e.g. the host's mailer or an SMTP plugin);
   - set the From address to a curamobility.org mailbox, since forms use `#blog_admin_email` (clint@) as From;
   - send a real test to mveal72@yahoo.com.
+- **Breadcrumb icons white (2026-09-24):** the banner breadcrumb's home icon and » separator are `::after` masks filled with palette navy. "Cura: headings" now sets `.breakdance h1 + .bde-div .bde-button__button::after{background-color:#FFF}`. Verified white on 12 page types (pages, service, policy, form, confirmation, sitemap).
