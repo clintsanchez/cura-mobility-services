@@ -172,3 +172,9 @@
   - Alexis (a unisex name) takes a man's portrait, because there were 13 women's portraits for 14 traditionally female names.
   - The original assignments are still in the untouched zip in Downloads.
   - The old media was deleted and re-uploaded via `cura-reviews-data.php`.
+- **Reviews page `/reviews/`** (page 202, the pack's Testimonial layout), published and added to the Primary menu between FAQs and Contact:
+  - The standard interior banner (dynamic title and breadcrumb) with a Cura photo.
+  - Section 108 keeps the pack's row container (Div 115). Its 3 static rows are replaced by one Post Loop of all reviews (newest first, 3 per row, 32px gap) using the **Review card** block.
+  - A **Reviews empty** block (1485) shows a short note when no reviews qualify (the live site before real reviews exist).
+  - Same local-only sample guard as the other review loops.
+  - Script: `website/build/cura-reviews-page.php`.
