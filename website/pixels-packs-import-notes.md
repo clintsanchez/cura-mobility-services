@@ -250,3 +250,15 @@
   - Global stylesheet **"Cura: headings"** keeps `p.bde-heading` in Montserrat, so nothing changed visually.
 - **Verified:** a crawl of 22 public URLs (all pages, all 9 services, policies, forms, confirmation) finds exactly one `<h1>` on each, the hero title, and no heading repeating it.
 - **Rule going forward:** only the hero or banner title is `<h1>`. Always set a tag on new Heading elements: `h2` for sections, `h3` for cards and items.
+
+## Call-only (2026-09-23)
+- **Cura is call-only**, per Clint: for NEMT, bookings need a conversation. Removed:
+  - The **Text** (`sms:`) buttons on Home (192) and About (176).
+  - Every "call or text" / "call, text or…" phrase in:
+    - Breakdance: footer CTA, Home/About icon boxes and CTA text, Contact intro, reviews-empty note, confirmation template.
+    - All 10 ride-option "Booking" rows (now "Call or online").
+    - 7 FAQ answers.
+    - The recurring-rides highlight (now "Easy changes by phone").
+  - The build scripts and service content file are patched too, so re-runs stay clean.
+- **Rule:** a button or link names its one action. `tel:` → "Call" / "Call (225) 363-0845". No texting language anywhere on this site.
+- **Verified:** a rendered-HTML crawl of 20 URLs finds no `sms:`, "text us", "call or text" or Text buttons.

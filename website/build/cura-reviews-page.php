@@ -13,7 +13,7 @@ $alt = 'Senior woman in glasses smiling from the back seat window of a car';
 cura_bd_set($t, 100, 'design.background.image.breakpoint_base', cura_bd_image(cura_upload($W . 'home-rider/senior-woman-smiling-in-back-seat-window.webp', $alt, $alt)));
 
 // "When empty" block: shown instead of the grid when no reviews qualify (live site before real reviews).
-$empty = cura_bd_block('Reviews empty', [cura_bd_el('Text', ['content' => ['content' => ['text' => 'Rider reviews are on the way. Have you ridden with us? We would love to hear how it went. Call or text <a href="tel:+12253630845">(225) 363-0845</a>.']], 'settings' => ['advanced' => ['classes' => ['cura-reviews-empty']]]])]);
+$empty = cura_bd_block('Reviews empty', [cura_bd_el('Text', ['content' => ['content' => ['text' => 'Rider reviews are on the way. Have you ridden with us? We would love to hear how it went. Call <a href="tel:+12253630845">(225) 363-0845</a>.']], 'settings' => ['advanced' => ['classes' => ['cura-reviews-empty']]]])]);
 
 $args = "['post_type' => 'review', 'posts_per_page' => 60, 'orderby' => ['date' => 'DESC', 'menu_order' => 'ASC'], 'tax_query' => (wp_get_environment_type() === 'local' ? [] : [['taxonomy' => 'review-categories', 'field' => 'slug', 'terms' => ['sample'], 'operator' => 'NOT IN']])]";
 $loop = cura_bd_el('PostsLoop', ['content' => ['repeated_block' => ['global_block' => $card, 'advanced' => ['when_empty' => $empty]], 'query' => ['query' => ['active' => 'php', 'text' => '', 'php' => "return $args;",

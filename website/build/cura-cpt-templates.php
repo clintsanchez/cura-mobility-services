@@ -99,7 +99,7 @@ $log['form'] = $template('Single Form', 'forms', $t);
 // ---- Single Confirmation (the form layout, with a thank-you) ------------------------------------------
 $l = $label; $l['content']['content'] = $dynText('post_title');
 $h = $h2; unset($h['content']['content']['text_dynamic_meta']); $h['content']['content']['text'] = 'Thank you. We got your request.'; $h['content']['content']['tags'] = 'h2';
-$msg = $body; $msg['content']['content'] = ['text' => '<p>We will call you soon to confirm the details.</p><p><strong>What happens next</strong></p><ol><li>We review your request.</li><li>We call you to confirm the pickup, the ride type and any mobility needs.</li><li>You get a clear price before anything is booked.</li></ol><p>Need us sooner? Call or text <a href="tel:+12253630845">(225) 363-0845</a>. For a medical emergency, call 911.</p>'];
+$msg = $body; $msg['content']['content'] = ['text' => '<p>We will call you soon to confirm the details.</p><p><strong>What happens next</strong></p><ol><li>We review your request.</li><li>We call you to confirm the pickup, the ride type and any mobility needs.</li><li>You get a clear price before anything is booked.</li></ol><p>Need us sooner? Call <a href="tel:+12253630845">(225) 363-0845</a>. For a medical emergency, call 911.</p>'];
 $msg['settings']['advanced']['classes'] = ['cura-prose'];
 $home = $cta; $home['content']['content']['text'] = 'Back to home'; $home['content']['content']['link'] = ['type' => 'url', 'url' => home_url('/')];
 $call = $cta;
