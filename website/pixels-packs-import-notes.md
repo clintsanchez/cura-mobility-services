@@ -301,3 +301,21 @@
   2. Update the **effective date** (currently September 23, 2026) to the launch date.
   3. Confirm the **info@curamobility.org** domain.
   4. Trim the "may use" tool mentions (Google Analytics, reCAPTCHA, Meta Pixel) to what's actually installed.
+
+## WS Form "Ride request" (2026-09-23)
+- **WS Form 8, "Ride request"** (`[ws_form id="8"]`) is a copy of the Breakdance ride-request form (Home 158, Book a ride, FAQs):
+  - **Fields:** Rider's name, Your email, Your phone (required); Mobility needs and Trip type (same options); Appointment date (native date input); Pickup address; Destination. Button: "Request my ride".
+  - **Layout:** 4/4/4, 4/4/4, 6/6 from tablet up; full width on phones.
+  - **Labels:** hidden visually, kept as `aria-label`.
+  - **Actions:** save submission; show "Thank you. We will call you to confirm your ride."; email clint@blaksheepcreative.com ⏳ (switch to Michael at handoff), with reply-to the rider's email and subject "New ride request from [name]".
+  - **Build:** `website/build/cura-wsform-ride-request.php`, via WS Form's API from the Newsletter form's object. Re-running deletes and recreates the form, so the **id changes**; update any shortcodes after a re-run.
+- **Verified:**
+  - Measured side by side at 1030px: identical widths (333/507/1030) and heights (46px fields, 47px button). The dropdown chevrons match.
+  - A test submission saved all 8 values and showed the success message. The test entry and the temporary preview page were deleted.
+  - Not checked: email delivery.
+- **Styling** ("Cura: WS Form" stylesheet) now also sets the 46px control height, the button padding, dark-ink placeholders, and a Breakdance-style chevron on `span.wsf-select-arrow` (WS draws a border-triangle there and forces `background-image:none !important` on selects).
+- **WS Form global setting:** `ui_datepicker = native`, so all WS date fields use the browser's date input.
+- **Breakdance forms** now inherit the site font; their controls were falling back to Arial and monospace.
+- **Gotchas:**
+  - When cloning a WS form object, don't strip `id` recursively. Data-grid options need their column and row ids, or the options render blank.
+  - `label_render` off hides a submit button's text.
