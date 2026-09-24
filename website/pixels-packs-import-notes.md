@@ -186,3 +186,19 @@
   - Static IconBox and ImageBox cards in Columns: Home service boxes 515–519 and the Book a Ride "Who we help" cards.
   - The ride-option tables' "Book a ride" buttons (columns containing Business Hours).
 - **Verified:** equal button baselines in every row on Services, Home and Book a Ride. The Rates buttons keep the pack's 15px overhang below the card.
+
+## CPT single templates: Policies, Forms, Confirmations (2026-09-23)
+- **Pattern** is taken from Clint's Elementor sites: LSS "Single Policy" 1665 and "Single Form" 1799, Tiger Town "Single Confirmation" 2607, Red White & Clicks confirmation 1510.
+  - Interior banner with dynamic title and breadcrumb.
+  - **66/33 row:** content on the left; **sticky sidebar on the right** (top 150px, static below 1024px).
+  - Sidebar: a **Get in touch** card (Phone, Email, Service area, **Book a ride** button), then a card of **link buttons**.
+- **Built from** the Single Service template's structure (sidebar cards, teal link buttons, spacing), with columns re-sized and re-ordered:
+  - **Single Policy** (1487, type `policies`): the post title, then the post content in `.cura-prose`. Link buttons: all policies.
+  - **Single Form** (1488, `forms`): "Request form" label, the title, the excerpt as intro, then the post content (form shortcode or block) in a white card. Link buttons: services.
+  - **Single Confirmation** (1489, `confirmation`): the post title as label, "Thank you. We got your request.", next steps (review, confirmation call, price before booking), 911 line, then **Back to home** and **Call** buttons. Link buttons: services. The Confirmation type has no editor, so this copy lives in the template.
+- **Global stylesheet** "Cura: CPT templates" (sticky sidebar, contact card, prose, form card, button row).
+- **Script:** `website/build/cura-cpt-templates.php`.
+- ⚠️ **Content still to do:**
+  - The 5 policies are **other clients' text** ("PinkLine Systems", "Chronicle Jets, LLC", charter references). They must be rewritten for Cura Mobility Services, LLC and reviewed before launch.
+  - The 4 forms (Consultation, Estimate, Quote, Appointment) and their confirmations are blueprint placeholders with no form content. They need Cura equivalents (e.g. Request a ride, Recurring rides, Facility inquiry), the WS Form or Breakdance form, and redirects to their confirmations.
+  - Confirmations should be noindexed in SEOPress.
