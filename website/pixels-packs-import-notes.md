@@ -273,3 +273,14 @@
 - **Data-script fix:** `cura-data.php` still read each service's card text and icon from the Services page's old static icon boxes. Those are now a loop, so a run blanked the excerpts and icons. It was caught in the same session and restored. The card text and icons now live in the script (`$cards`), and General FAQs are only upserted from an optional `cura-faqs-general.php`.
 - **Reviews overhang:** the pack's review row uses a `-100px` bottom margin with a 0 bottom-padding section, which is meant to hang into the next section. Home keeps it (the next section absorbs it; 70px clear). The **Single Service template's** copy now has 70px bottom padding and no negative margin, so it no longer covers the footer CTA (set in `cura-reviews-build.php`).
 - **Footer logo (2026-09-23):** Footer 244 image 117 now uses the **no-book** horizontal on-navy logo (`brand/assets/no-book/png/cura-logo-horizontal-on-navy-1200.png`, attachment 1511). The header still uses the logo with the book (1280) until Michael decides (ask #9).
+
+## Footer bar: BlakSheep standard (2026-09-23)
+- Footer 244 bottom bar (section 143 > Columns 172, class `cura-footer-bar`), matching tigertownconstruction.com:
+  1. **Copyright:** dynamic year, "© 2026 Cura Mobility Services. All rights reserved." (existing text 176).
+  2. **Links:** privacy · cookies · terms · accessibility · sitemap → `/policies/*/` and `/sitemap/`.
+  3. **Credit:** "Powered by" plus the white BlakSheep logo SVG (attachment 1512, alt "Website & SEO by BlakSheep Creative"). It links to https://blaksheepcreative.com/services/web-design-development/baton-rouge/ in a new tab; BSC has no healthcare industry page.
+- **New Sitemap page** `/sitemap/` (1513): Single Policy layout with the SEOPress HTML sitemap (`[seopress_html_sitemap]`, Breakdance Shortcode element). It lists 30 links.
+- The SVG is registered directly as an attachment (WP blocks SVG uploads). Source: `brand/assets/credits/blaksheep-creative-white.svg`.
+- Global stylesheet **"Cura: footer bar"**: flex space-between, white text, stacked on mobile.
+- **Gotcha:** the Image element's link uses `{link_type:'url', url, new_tab:true}`, not the Button's `{type, openInNewTab}`.
+- Script: `website/build/cura-footer-bar.php`.
