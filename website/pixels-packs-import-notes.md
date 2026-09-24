@@ -165,4 +165,7 @@
 - **To add a real review:** create a Review post (not in Sample), fill the fields, and link its service. It shows everywhere automatically. Delete the 27 samples before launch.
 - **Scripts:** `website/build/cura-reviews-data.php` (+ `cura-reviews-list.php`) and `cura-reviews-build.php` (+ `review-card-props.json`).
 
-- ⚠️ **Headshot filenames look mismatched in the supplied zip:** about 15 of 27 portraits don't match their names (e.g. `daniel-pierce` is a woman, `monica-hayes` is a man). They're left as supplied pending Clint's call.
+- **Headshots remapped (Clint approved):** the supplied zip had 16 of 27 portraits swapped relative to their names. They're reassigned by apparent gender and age, and the pCloud files renamed so each filename matches its reviewer.
+  - Alexis (a unisex name) takes a man's portrait, because there were 13 women's portraits for 14 traditionally female names.
+  - The original assignments are still in the untouched zip in Downloads.
+  - The old media was deleted and re-uploaded via `cura-reviews-data.php`.
