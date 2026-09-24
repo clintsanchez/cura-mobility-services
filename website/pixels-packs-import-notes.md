@@ -153,7 +153,9 @@
   - Each is linked to its service through a new Meta Box relationship, **`review_to_service`** (mb-relationship 1399).
   - Headshots are in pCloud `05-Photos/reviewers-SAMPLE-synthetic/`, with alt text marking them synthetic.
 - **Breakdance:**
-  - **Review card** global block (1454): the pack's avatar, quote and name elements bound to the review fields, plus a Code Block for the linked service and a visible **"Sample review"** tag on anything in the sample category.
+  - **Review card** global block (1454): the pack's avatar, quote and name elements bound to the review fields, plus a visible **"Sample review"** tag on anything in the sample category.
+  - **Service line:** a nested Post Loop of the services connected to the review (PHP query `relationship from get_the_ID()`), repeating block **Review service name** (1456), a Heading bound to `post_title`.
+  - Why not Breakdance's `metabox_post_field_review_to_service_to`: Meta Box stores relationship values as a cloneable array (`["1342"]`), and Breakdance's single-post field calls `get_post()` on it, so it renders empty. Breakdance 2.8.3 also has no Meta Box relationship source in the query control (ACF only), hence the PHP query mode.
   - **Home 415:** the pack's reviews section is unhidden. Its taxi background is replaced (home-rider photo), the label is Tint, and a Post Loop shows 3 random reviews.
   - **Single Service template:** the same section is inserted after the main content (class `cura-reviews-section`), showing that service's reviews via the relationship.
 - **Launch guard:**
@@ -162,3 +164,5 @@
   - On the live site the sections therefore disappear until real reviews exist. Verified: the non-local query returns 0.
 - **To add a real review:** create a Review post (not in Sample), fill the fields, and link its service. It shows everywhere automatically. Delete the 27 samples before launch.
 - **Scripts:** `website/build/cura-reviews-data.php` (+ `cura-reviews-list.php`) and `cura-reviews-build.php` (+ `review-card-props.json`).
+
+- ⚠️ **Headshot filenames look mismatched in the supplied zip:** about 15 of 27 portraits don't match their names (e.g. `daniel-pierce` is a woman, `monica-hayes` is a man). They're left as supplied pending Clint's call.

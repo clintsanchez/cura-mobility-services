@@ -24,13 +24,21 @@ $guard = fn($args, $sectionClass) => cura_bd_el('CodeBlock', ['content' => ['con
 // 1. Review card global block (pack column 434 children, bound to review fields).
 $img = $p(440); $img['content']['content']['image'] = "[breakdance_dynamic field='metabox_image_reviewer_avatar']";
 $tag = cura_bd_el('CodeBlock', ['content' => ['content' => ['php_code' => "<?php if (has_term('sample', 'review-categories')) echo '<span class=\"cura-sample-tag\">Sample review</span>'; ?>"]]]);
+$svcHead = $bind($p(443), 'post_title'); $svcHead['settings']['advanced']['classes'] = ['cura-loop-flush'];
+$svcBlk = cura_bd_block('Review service name', [['id' => 0, 'data' => ['type' => 'EssentialElements\\Heading', 'properties' => $svcHead], 'children' => []]]);
+$svcLine = cura_bd_el('PostsLoop', ['content' => ['repeated_block' => ['global_block' => $svcBlk], 'query' => ['query' => ['active' => 'php', 'text' => '',
+  'php' => "return ['post_type' => 'services', 'posts_per_page' => 1, 'relationship' => ['id' => 'review_to_service', 'from' => get_the_ID()]];",
+  'custom' => ['source' => 'post_types', 'postsPerPage' => 1, 'conditions' => [[[]]], 'totalPosts' => null, 'ignoreStickyPosts' => true, 'ignoreCurrentPost' => false, 'postTypes' => ['services'], 'orderBy' => 'menu_order', 'order' => 'ASC', 'date' => 'all', 'beforeDate' => null, 'afterDate' => null, 'offset' => null, 'acfField' => null, 'metaboxField' => null]]]],
+  'design' => ['list' => ['layout' => 'list', 'space_between_items' => ['number' => 0, 'unit' => 'px', 'style' => '0px']]], 'settings' => ['advanced' => ['classes' => ['cura-review-service-loop']]]]);
 $card = cura_bd_el('Div', ['settings' => ['advanced' => ['classes' => ['cura-card', 'cura-review-card']]]], [
   $tag,
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Image', 'properties' => $img], 'children' => []],
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Text', 'properties' => $bind($p(441), 'metabox_field_review_body')], 'children' => []],
   ['id' => 0, 'data' => ['type' => 'EssentialElements\\Heading', 'properties' => $bind($p(442), 'metabox_field_persons_name')], 'children' => []],
-  // Service line: the linked service's title (Breakdance's relationship field is empty from the review side).
-  cura_bd_el('CodeBlock', ['content' => ['content' => ['php_code' => "<?php \$s = MB_Relationships_API::get_connected(['id' => 'review_to_service', 'from' => get_the_ID()]); if (\$s) echo '<p class=\"cura-review-service\">' . esc_html(\$s[0]->post_title) . '</p>'; ?>"]]]),
+  // Service line: nested Post Loop of the service(s) connected to this review (Meta Box relationship),
+  // repeating a block whose Heading is bound to post_title. Breakdance's own relationship field
+  // returns empty because Meta Box stores relationship values as an array.
+  $svcLine,
 ]);
 $blk = cura_bd_block('Review card', [$card]);
 $log['block'] = $blk;
@@ -72,7 +80,7 @@ $log['template_section'] = $sid;
 
 // 4. Styles.
 $gs = json_decode(json_decode(get_option('breakdance_global_settings_json_string')), true); $ss = $gs['settings']['code']['stylesheets'];
-$css = ".cura-review-card{display:flex;flex-direction:column;align-items:center;text-align:center}\n.cura-sample-tag{display:inline-block;margin-bottom:12px;padding:3px 10px;border-radius:999px;background:#FFF4D6;color:#6B4400;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}\n.cura-review-card .bde-text,.cura-review-card .bde-heading,.cura-review-card .bde-code-block{text-align:center;width:100%}\n.cura-review-card .bde-image{margin-inline:auto}\n.cura-review-card .cura-sample-tag{display:table;margin:0 auto 12px}\n.cura-review-service{margin:0;color:#02265A;font-size:15px;font-weight:500}";
+$css = ".cura-review-card{display:flex;flex-direction:column;align-items:center;text-align:center}\n.cura-sample-tag{display:inline-block;margin-bottom:12px;padding:3px 10px;border-radius:999px;background:#FFF4D6;color:#6B4400;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}\n.cura-review-card .bde-text,.cura-review-card .bde-heading,.cura-review-card .bde-code-block{text-align:center;width:100%}\n.cura-review-card .bde-image{margin-inline:auto}\n.cura-review-card .cura-sample-tag{display:table;margin:0 auto 12px}\n.cura-review-service-loop{width:100%}";
 $pos = array_search('Cura: reviews', array_column($ss, 'name')); $e = ['name' => 'Cura: reviews', 'code' => $css];
 if ($pos === false) $ss[] = $e; else $ss[$pos] = $e;
 $gs['settings']['code']['stylesheets'] = $ss; \Breakdance\Data\save_global_settings(json_encode(['settings' => $gs['settings']]));
