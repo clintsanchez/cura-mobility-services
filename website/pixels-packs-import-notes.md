@@ -144,3 +144,21 @@
   - Text bindings need `<prop>_dynamic_meta`; URL bindings need `link.dynamicMeta`.
   - Global settings are stored double-JSON-encoded, and stylesheet CSS sits under `code`.
   - Don't iterate `($x['children'] ?? [])` by reference; it's a temporary copy.
+
+## Reviews (2026-09-23): SAMPLE placeholders
+- **The 27 reviews supplied 2026-09-23 are placeholders, not rider feedback.** The zip README says the headshots are synthetic people who "should not be presented as genuine customer reviewers." Publishing them as real would break the CLAUDE.md accuracy guardrail and the FTC's 2024 rule on fake and AI-generated reviews.
+- **Data:**
+  - 27 `review` posts in review category **Sample (placeholder)** (`sample`).
+  - Fields: `review_body`, `persons_name`, `reviewer_avatar`, and `source` = "Sample placeholder". No star ratings, because none were supplied.
+  - Each is linked to its service through a new Meta Box relationship, **`review_to_service`** (mb-relationship 1399).
+  - Headshots are in pCloud `05-Photos/reviewers-SAMPLE-synthetic/`, with alt text marking them synthetic.
+- **Breakdance:**
+  - **Review card** global block (1454): the pack's avatar, quote and name elements bound to the review fields, plus a Code Block for the linked service and a visible **"Sample review"** tag on anything in the sample category.
+  - **Home 415:** the pack's reviews section is unhidden. Its taxi background is replaced (home-rider photo), the label is Tint, and a Post Loop shows 3 random reviews.
+  - **Single Service template:** the same section is inserted after the main content (class `cura-reviews-section`), showing that service's reviews via the relationship.
+- **Launch guard:**
+  - Every review loop adds `tax_query NOT IN sample` unless `wp_get_environment_type() === 'local'`.
+  - A Code Block in each section hides the section when its query is empty.
+  - On the live site the sections therefore disappear until real reviews exist. Verified: the non-local query returns 0.
+- **To add a real review:** create a Review post (not in Sample), fill the fields, and link its service. It shows everywhere automatically. Delete the 27 samples before launch.
+- **Scripts:** `website/build/cura-reviews-data.php` (+ `cura-reviews-list.php`) and `cura-reviews-build.php` (+ `review-card-props.json`).

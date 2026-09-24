@@ -49,6 +49,10 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
   - the FAQs page accordion.
 - Details and IDs: `website/pixels-packs-import-notes.md` → "Dynamic phase". Build scripts: `website/build/`.
 
+## Reviews (2026-09-23): 🚨 SAMPLE placeholders
+- The 27 reviews are placeholders with synthetic headshots, not real riders. They're in review category **Sample** and show only on the local site, each tagged "Sample review". The live site hides the review sections until real reviews exist.
+- **Launch blocker:** delete the Sample reviews, then collect real ones through the GBP review ask. Never present the samples as genuine (CLAUDE.md guardrail, FTC 2024 rule).
+
 ## Photo library (2026-09-23)
 - In pCloud `05-Photos/`: 170 stock originals (107 Envato Elements + 63 Unsplash) with `stock/manifest.csv`, plus **159 SEO-named WebP web files** in `web/<page>/` with `web/image-map.csv` (alt text, use, license). See `05-Photos/README.md`. Register the Envato items to the Cura project before publishing. Gaps: real photos of Michael, his van and drivers; dialysis-specific scenes; side-ramp minivan.
 
