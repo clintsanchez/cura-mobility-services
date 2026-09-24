@@ -178,3 +178,11 @@
   - A **Reviews empty** block (1485) shows a short note when no reviews qualify (the live site before real reviews exist).
   - Same local-only sample guard as the other review loops.
   - Script: `website/build/cura-reviews-page.php`.
+
+## Card buttons pinned to the bottom (2026-09-23)
+- Global stylesheet **"Cura: card buttons"** (separate from the build-script stylesheets, so re-runs don't overwrite it). Cards with a button or link fill their height and push the button to the bottom with `margin-top:auto`, so buttons align across a row whatever the text length. The pack's minimum gap is kept: text `margin-bottom` is 20px on IconBox and 15px on ImageBox.
+- **Covers:**
+  - Loop cards (`.cura-card` in a Post Loop item), e.g. the Services grid.
+  - Static IconBox and ImageBox cards in Columns: Home service boxes 515–519 and the Book a Ride "Who we help" cards.
+  - The ride-option tables' "Book a ride" buttons (columns containing Business Hours).
+- **Verified:** equal button baselines in every row on Services, Home and Book a Ride. The Rates buttons keep the pack's 15px overhang below the card.
