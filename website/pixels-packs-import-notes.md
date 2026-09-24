@@ -240,3 +240,13 @@
   - Slugs are unchanged.
 - The Breakdance headings were already sentence case; a scan found no title-case holdouts.
 - **Footer "Privacy policy"** was pointing at the WordPress default page 3 (`/privacy-policy/`, published and **empty**). It now links to `/policies/privacy-policy/`, and page 3 is set to draft. `wp_page_for_privacy_policy` still points at page 3.
+
+## One H1 per page (2026-09-23)
+- **Duplicate titles removed:** the Single Service (1387), Single Policy and Single Form main columns no longer repeat the hero title. On forms the "Request form" eyebrow was dropped too, so the lede leads.
+- **Heading tags fixed:** Breakdance's Heading defaults to `<h1>` when no tag is set, and the pack left most headings untagged (Home had 11 `<h1>`s, other pages 3 to 9). Every untagged heading now has a tag:
+  - `<h3>`: card and item titles (ride-option table titles, service feature titles, sidebar card titles "Our services" / "Our policies").
+  - `<p>`: "Call or text:" and the owner-quote names.
+  - `<h2>`: the confirmation's "Thank you. We got your request."
+  - Global stylesheet **"Cura: headings"** keeps `p.bde-heading` in Montserrat, so nothing changed visually.
+- **Verified:** a crawl of 22 public URLs (all pages, all 9 services, policies, forms, confirmation) finds exactly one `<h1>` on each, the hero title, and no heading repeating it.
+- **Rule going forward:** only the hero or banner title is `<h1>`. Always set a tag on new Heading elements: `h2` for sections, `h3` for cards and items.

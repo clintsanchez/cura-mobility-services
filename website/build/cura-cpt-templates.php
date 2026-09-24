@@ -3,6 +3,7 @@
 // Layout follows Clint's other sites (LSS / Tiger Town / RWC Elementor templates): interior banner with dynamic
 // title + breadcrumb, then a 66/33 row: main content left, sticky sidebar right with a "Get in touch" contact
 // card + CTA, then a list of link buttons (policies on policy pages, services on form/confirmation pages).
+// One h1 per page: the banner title. Main columns do not repeat it.
 // Built from the Single Service template (1387) so the sidebar buttons, cards and spacing are the pack's.
 // Idempotent (templates matched by title).
 require_once WP_CONTENT_DIR . '/novamira-sandbox/cura-bd.php';
@@ -27,7 +28,7 @@ $template = function ($title, $type, $tree) {
 
 // Pack pieces reused in every template.
 $label = $props($base, 136);                                  // small navy eyebrow label ("Questions")
-$h2    = $props($base, 128);                                  // main column heading
+$h2    = $props($base, 135);                                  // section heading (h2)
 $body  = $props($base, 129);                                  // main column text
 $cta   = $props($book, 159);                                  // navy primary button
 $contactBoxes = array_map(fn($id) => ['id' => 0, 'data' => cura_bd_node($contact['root'], $id)['data'], 'children' => []], [124, 125, 122]); // phone, email, service area
@@ -83,7 +84,7 @@ $build = function ($bannerImg, $linksTitle, $linksPT, array $main) use ($base, $
 $h = $h2; $h['content']['content'] = array_merge($h['content']['content'], $dynText('post_title'));
 $p = $body; $p['content']['content'] = $dynText('post_content'); $p['settings']['advanced']['classes'] = ['cura-prose'];
 $t = $build($img('local-baton-rouge/louisiana-state-capitol-baton-rouge.webp', 'Louisiana State Capitol tower in downtown Baton Rouge against a blue sky'),
-  'Our policies', 'policies', [$node('Heading', $h), $node('Text', $p)]);
+  'Our policies', 'policies', [$node('Text', $p)]);
 $log['policy'] = $template('Single Policy', 'policies', $t);
 
 // ---- Single Form ---------------------------------------------------------------------------------
@@ -92,12 +93,12 @@ $h = $h2; $h['content']['content'] = array_merge($h['content']['content'], $dynT
 $intro = $body; $intro['content']['content'] = $dynText('post_excerpt'); $intro['settings']['advanced']['classes'] = ['cura-form-lede'];
 $form = ['content' => ['content' => $dynText('post_content')], 'settings' => ['advanced' => ['classes' => ['cura-form-embed']]]];
 $t = $build($img('home-booking/daughter-and-senior-mother-looking-at-phone.webp', 'Adult daughter and her senior mother smiling at a phone together on the sofa'),
-  'Our services', 'services', [$node('Text', $l), $node('Heading', $h), $node('Text', $intro), $node('Text', $form)]);
+  'Our services', 'services', [$node('Text', $intro), $node('Text', $form)]);
 $log['form'] = $template('Single Form', 'forms', $t);
 
 // ---- Single Confirmation (the form layout, with a thank-you) ------------------------------------------
 $l = $label; $l['content']['content'] = $dynText('post_title');
-$h = $h2; unset($h['content']['content']['text_dynamic_meta']); $h['content']['content']['text'] = 'Thank you. We got your request.';
+$h = $h2; unset($h['content']['content']['text_dynamic_meta']); $h['content']['content']['text'] = 'Thank you. We got your request.'; $h['content']['content']['tags'] = 'h2';
 $msg = $body; $msg['content']['content'] = ['text' => '<p>We will call you soon to confirm the details.</p><p><strong>What happens next</strong></p><ol><li>We review your request.</li><li>We call you to confirm the pickup, the ride type and any mobility needs.</li><li>You get a clear price before anything is booked.</li></ol><p>Need us sooner? Call or text <a href="tel:+12253630845">(225) 363-0845</a>. For a medical emergency, call 911.</p>'];
 $msg['settings']['advanced']['classes'] = ['cura-prose'];
 $home = $cta; $home['content']['content']['text'] = 'Back to home'; $home['content']['content']['link'] = ['type' => 'url', 'url' => home_url('/')];

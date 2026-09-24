@@ -39,7 +39,8 @@ $gap = fn($px) => ['number' => $px, 'unit' => 'px', 'style' => $px . 'px'];
 // Banner + images + title + intro
 $S(100, 'design.background.image.breakpoint_base', "[breakdance_dynamic field='metabox_image_banner_image']");
 $S(127, 'content.content.image', "[breakdance_dynamic field='post_featured_image']");
-$ti = $dyn('post_title'); $S(128, 'content.content.text', $ti['shortcode']); $S(128, 'content.content.text_dynamic_meta', $ti['meta']);
+// Main-column title (128) removed 2026-09-23: the banner H1 already shows the title.
+cura_bd_remove($t['root'], 128);
 $pc = $dyn('post_content'); $S(129, 'content.content.text', $pc['shortcode']); $S(129, 'content.content.text_dynamic_meta', $pc['meta']);
 $S(131, 'content.content.image', "[breakdance_dynamic field='metabox_image_detail_image']");
 
@@ -48,6 +49,7 @@ $side = cura_bd_el('PostsLoop', ['content' => ['repeated_block' => ['global_bloc
   'design' => ['list' => ['layout' => 'list', 'space_between_items' => $gap(1)]]]);
 cura_bd_reid($side, $t);
 $d = &cura_bd_node($t['root'], 116); $d['children'] = array_values(array_filter($d['children'], fn($c) => $c['id'] == 115)); $d['children'][] = $side; unset($d);
+$S(115, 'content.content.tags', 'h3'); // sidebar card title, not a page heading
 
 // Highlights: Dynamic Data Loop over the cloneable group
 $hl = cura_bd_el('DynamicDataLoop', ['content' => ['repeated_block' => ['global_block' => $blkHl], 'field' => ['repeater_field' => 'metabox_group_highlights']],
