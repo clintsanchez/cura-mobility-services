@@ -48,7 +48,7 @@ Cura drives Baton Rouge-area riders to doctor visits, dialysis, treatments and h
 - Registered NEMT provider with an NPI. ✅ The NPI is public; phrase it as "a registered non-emergency medical transportation provider". Do not imply Medicaid enrollment.
 - Wheelchair-accessible van (ramp/lift, securement). ⏳
 - Door-to-door assistance included on every ride. ⏳
-- Day-before ride confirmation and an on-the-way call or text. ⏳
+- Day-before ride confirmation and an on-the-way call. ⏳ (Cura is call-only: no texting in copy or CTAs.)
 - Recurring rides for dialysis and ongoing treatment (standing schedule). ⏳
 - Price confirmed before booking; no hidden fees. ⏳
 - Drivers background-checked and trained (CPR/first aid, PASS). ⏳ Need documents.

@@ -16,7 +16,7 @@
 
 ## Positioning
 - **Differentiation** (working, ⏳ client to confirm):
-  - **Reliability and respect**: on-time pickup, a call or text on the way, door-to-door help, dignity. This directly targets the no-show and long-wait complaints about local competitors.
+  - **Reliability and respect**: on-time pickup, a call when the driver is on the way, door-to-door help, dignity. This directly targets the no-show and long-wait complaints about local competitors.
   - **A local owner who answers the phone**: a Baton Rouge 225 number, not a national template or out-of-state call center.
   - **Clarity**: plain answers on who pays, what it costs and how to book. No local competitor publishes prices.
   - **Care rooted in faith**: the logo has an open Bible with a cross. ⏳ Ask #9: shown on the site, or logo only?

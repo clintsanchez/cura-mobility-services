@@ -126,7 +126,7 @@ Business-startup queries ("how to start a transportation business"), jobs, van s
 - Schema: LocalBusiness/MedicalBusiness with areaServed, plus Service, FAQPage and BreadcrumbList. No competitor showed any.
 - Click-to-call plus a short Request a Ride form (pickup, drop-off, date and time, mobility needs, return trip). Apply the blog CTA standard in CLAUDE.md.
 - Show hours and required booking notice prominently. Several competitors are weekday-only, so early-morning or Saturday dialysis coverage is worth leading with if it's real.
-- Differentiate on reliability (on-time pickup, a call or text when the driver is on the way). Competitor reviews cite no-shows and long waits. **Don't name competitors or invent statistics.**
+- Differentiate on reliability (on-time pickup, a call when the driver is on the way). Competitor reviews cite no-shows and long waits. **Don't name competitors or invent statistics.**
 
 ---
 
