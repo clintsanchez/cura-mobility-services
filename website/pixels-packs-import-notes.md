@@ -202,3 +202,18 @@
   - The 5 policies are **other clients' text** ("PinkLine Systems", "Chronicle Jets, LLC", charter references). They must be rewritten for Cura Mobility Services, LLC and reviewed before launch.
   - The 4 forms (Consultation, Estimate, Quote, Appointment) and their confirmations are blueprint placeholders with no form content. They need Cura equivalents (e.g. Request a ride, Recurring rides, Facility inquiry), the WS Form or Breakdance form, and redirects to their confirmations.
   - Confirmations should be noindexed in SEOPress.
+- **Forms wired (2026-09-23):** the form posts were empty; the blueprint never put its WS Form shortcodes in them. Now:
+
+  | Form post | WS Form |
+  |---|---|
+  | Free Quote 40 | `[ws_form id="1"]` Request Quote |
+  | Free Estimate 39 | `[ws_form id="1"]` Request Quote (no estimate form exists) |
+  | Free Consultation 38 | `[ws_form id="5"]` |
+  | Request Appointment 33 | `[ws_form id="2"]` |
+
+  - **WS Form actions** (from the blueprint): save the submission, email `#blog_admin_email` (= clint@blaksheepcreative.com ⏳ switch to Michael at handoff), and redirect to `/confirmation/<slug>/`.
+  - **Gaps:**
+    - Contact Us (form 4) redirects to `/confirmation/contact/`, which doesn't exist.
+    - Estimate uses the Quote form, so it redirects to the Quote confirmation.
+    - The WS Form fields are generic blueprint fields (address, "new client?"), not Cura's ride-request fields.
+    - WS Form's default skin (black-bordered inputs) doesn't match the site's forms yet.
