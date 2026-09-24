@@ -284,3 +284,4 @@
 - Global stylesheet **"Cura: footer bar"**: flex space-between, white text, stacked on mobile.
 - **Gotcha:** the Image element's link uses `{link_type:'url', url, new_tab:true}`, not the Button's `{type, openInNewTab}`.
 - Script: `website/build/cura-footer-bar.php`.
+- **Footer Helpful links:** "Privacy policy" (button 130) removed on 2026-09-23; the bottom bar now carries the policy links.
