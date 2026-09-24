@@ -26,11 +26,13 @@ $content = [
   'quote' => ['Thanks. We got your quote request.', $steps('We will call you soon with a clear price for your ride.', ['We review your ride details.', 'We call you to confirm the pickup, the ride type and any mobility needs.', 'You get a clear price before anything is booked.'])],
   'estimate' => ['Thanks. We got your estimate request.', $steps('We will call you soon with an estimate for your ride.', ['We review your trip details.', 'We call you to go over the ride type and any mobility needs.', 'You get a clear price before anything is booked.'])],
   'consultation' => ['Thanks. We will call you to talk it through.', $steps('We will call you soon to learn about the rider and help you choose the right ride.', ['We review what you shared.', 'We call you to talk about the rider, the trips and any mobility needs.', 'We help you set up a ride or a recurring schedule if you are ready.'])],
+  'ride-request' => ['Thanks. We got your ride request.', $steps('We will call you soon to confirm your ride.', ['We review the pickup, destination and appointment time.', 'We call you to confirm the ride, any mobility needs and the price.', 'Your ride is booked once you confirm it with us on the call.'])],
+  'contact' => ['Thanks for reaching out.', $steps('We got your message and will get back to you soon.', ['We read your message.', 'We call or email you back.', 'If your message is about a ride, we help you book it.'])],
   'appointment' => ['Thanks. We got your request.', $steps('We will call you soon to confirm a time to talk.', ['We review your request.', 'We call you to confirm the details.', 'You get a clear price before any ride is booked.'])],
 ];
 foreach ($content as $slug => [$h1, $body]) {
   $p = get_posts(['post_type' => 'confirmation', 'name' => $slug, 'post_status' => 'any', 'numberposts' => 1]);
-  if (!$p) continue;
+  if (!$p) { $titles = ['ride-request' => 'Ride request', 'contact' => 'Contact']; if (!isset($titles[$slug])) continue; $nid = wp_insert_post(['post_type' => 'confirmation', 'post_status' => 'publish', 'post_title' => $titles[$slug], 'post_name' => $slug, 'post_author' => 1]); $p = [get_post($nid)]; }
   update_post_meta($p[0]->ID, 'conf_h1', $h1);
   update_post_meta($p[0]->ID, 'conf_content', $body);
   $log['posts'][$slug] = $p[0]->ID;

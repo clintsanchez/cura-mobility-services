@@ -345,3 +345,34 @@
 - **Content** is set for quote 44, estimate 43, consultation 42 and appointment 41: a lead line, "What happens next" with 3 steps, and the call and 911 line. Call-only, no new promises.
 - **Scripts:** `website/build/cura-confirmations.php` (fields and content) and `cura-cpt-templates.php` (template).
 - **Verified:** all 4 confirmations render the hero title as the only H1, the breadcrumb with the post title, 3 steps, both buttons and the sidebar.
+
+## Confirmations for every form; all forms on WS Form (2026-09-24)
+- **New confirmation posts:** Ride request 1517 (`/confirmation/ride-request/`, hero "Thanks. We got your ride request.") and Contact 1518 (`/confirmation/contact/`, hero "Thanks for reaching out."). Both have `conf_h1` and `conf_content` (in `cura-confirmations.php`).
+- **Ride request = WS Form 9** (rebuilt; form 8 is gone):
+  - Now redirects to `/confirmation/ride-request/` instead of showing a message.
+  - New hidden field **Requested from** (`#post_title`), so each email and submission shows the page it came from ("Home", "Book a ride", "Dialysis rides"…).
+  - Used on Home 158, Book a ride 123 and FAQs 161, and now also the **Single Service sidebar**: the card that said "Send a message" is now "Request this ride" (template 1387, node 166; classes `cura-ride-form cura-ride-form--stacked`, one field per row).
+- **Contact = WS Form 11 "Contact us"** (`cura-wsform-contact.php`), on the Contact page (186 #118, class `cura-contact-form`):
+  - Name, Email, Phone, Message (labels shown), the blueprint consent checkbox with Cura wording, and the hidden Requested from field. Button "Send message".
+  - Saves, emails clint@ ⏳ (reply-to the sender), then redirects to `/confirmation/contact/`.
+  - The blueprint Contact Us form (4) is deleted.
+- **Verified end to end:**
+  - Home ride request → /confirmation/ride-request/.
+  - Contact → /confirmation/contact/.
+  - Submissions stored with Requested from = "Home" / "Contact us". Test entries deleted.
+  - A site-wide scan finds **no Breakdance FormBuilders** left.
+- "Cura: WS Form" additions: stacked sidebar layout, and `body .wsf-form{text-align:left}` (the Contact column centers text).
+- **Form → confirmation map:**
+
+  | Form | Confirmation |
+  |---|---|
+  | Ride request 9 | ride-request |
+  | Contact us 11 | contact |
+  | Quote 1 | quote (also used by the Estimate form post) |
+  | Consultation 5 | consultation |
+  | Appointment 2 | appointment |
+  | Email updates 3 | on-page message (footer) |
+
+  The Estimate confirmation (43) is unused until the estimate form question is decided.
+- ⚠️ **Script note:** `cura-template.php` (the original Single Service build, from the now-trashed page 1307) predates this; re-running it would bring back the Breakdance sidebar form. Don't re-run it without updating it.
+- **API gotcha:** adding a field to an existing WS form via `db_update_from_object` overwrote another field's record. Rebuild forms from the script instead of patching fields in place.

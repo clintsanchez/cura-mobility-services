@@ -31,6 +31,7 @@ $fields = [
   $field('datetime', 'Appointment date', $third + ['input_type_datetime' => 'date', 'placeholder' => 'Appointment date']),
   $field('text', 'Pickup address', $half + ['placeholder' => 'Pickup address', 'autocomplete' => 'street-address']),
   $field('text', 'Destination (clinic, hospital or office)', $half + ['placeholder' => 'Destination (clinic, hospital or office)']),
+  $field('hidden', 'Requested from', ['default_value' => '#post_title', 'breakpoint_size_25' => '12']), // which page the request came from
   $field('submit', 'Request my ride', ['breakpoint_size_25' => '12', 'label_render' => 'on']), // label = button text, must render
 ];
 
@@ -56,7 +57,10 @@ $ids = []; foreach ($o->groups[0]->sections[0]->fields as $f) $ids[$f->label] = 
 $act = $o->meta->action;
 foreach ($act->groups[0]->rows as $r) {
   $d = json_decode($r->data[1]);
-  if ($d->id === 'message') { $d->meta->action_message_message = 'Thank you. We will call you to confirm your ride.'; }
+  if ($d->id === 'message') { // Redirect to the ride-request confirmation page instead (2026-09-24)
+    $q = new WS_Form_Form(); $q->id = 1; $qo = $q->db_read(true, false);
+    foreach ($qo->meta->action->groups[0]->rows as $qr) { $qd = json_decode($qr->data[1]); if ($qd->id === 'redirect') { $qd->meta->action_redirect_url = '/confirmation/ride-request/'; $r->data[0] = 'Confirmation Page'; $d = $qd; } }
+  }
   if ($d->id === 'email') {
     $d->meta->action_email_to = [(object) ['action_email_email' => 'clint@blaksheepcreative.com', 'action_email_name' => 'Cura ride requests']];
     $d->meta->action_email_from_name = 'Cura ride request';
