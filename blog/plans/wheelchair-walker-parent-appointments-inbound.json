@@ -1,0 +1,10 @@
+[
+  {"post_id": 1346, "field": "intro", "mode": "append_paragraph",
+   "anchor": "help a parent with a walker or wheelchair get to appointments",
+   "before": "Caring for a parent? Here is how to ", "after": ", from the car transfer to check-in."},
+  {"post_id": 1541, "field": "post_content", "mode": "insert_after_text",
+   "match": "Our [doctor appointment rides]",
+   "anchor": "getting a parent with a walker or wheelchair to appointments",
+   "before": "For step-by-step help, read our guide to ", "after": ".",
+   "note": "Insert as its own sentence at the end of the door-to-door medical ride paragraph."}
+]

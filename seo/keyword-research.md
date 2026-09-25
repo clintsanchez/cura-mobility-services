@@ -157,3 +157,6 @@ Business-startup queries ("how to start a transportation business"), jobs, van s
   - Post types: **confirmation** (noindex, nofollow), plus the loop-only and unused faqs, review, team, locations and products.
   - Taxonomies: faq-categories, review-categories, service-categories. All are dropped from the XML sitemap.
   - The sitemap now covers posts, pages, services, policies and forms. Verified in the rendered `<head>` and `/sitemaps.xml`.
+
+### 9a. Completion pass (2026-09-24)
+Full audit of every public post type and taxonomy. Filled the gaps: SEOPress focus keywords on all 28 indexed pages, services, forms and policies (from §3), tags on the 3 blog posts, Resources OG/Twitter image (1526), full SEOPress fields on the Caregiver guides category (OG 1530). Removed the Pixels pack's empty demo categories (incl. Taxi news, Uncategorized; default category is now Caregiver guides) and 14 empty demo tags. Re-audit: 31 indexed items, 0 gaps. Script: `website/build/cura-seo-complete.php`.

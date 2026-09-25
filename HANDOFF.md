@@ -96,3 +96,57 @@ authoritative sources. Do not print unverified credentials.
 
 ## Repo
 - GitHub: https://github.com/clintsanchez/cura-mobility-services (private)
+
+## Blog: Senior and caregiver guide cluster (published 2026-09-24, backdated weekly)
+
+- **Published (backdated weekly):** hub 1541 `medical-rides-for-aging-parents-baton-rouge`, spokes 1543 `planning-ride-home-hospital-discharge` and 1545 `wheelchair-walker-parent-appointments`. Author 2 (Cura Mobility Services), category 40 Caregiver guides, permalink `/caregiver-guides/<slug>/`.
+- **Workspace:** `blog/` (brief, verified stats in `briefs/research-stats.md`, posts, SVGs, featured images, review docs in `blog/reviews/`, inbound plans in `blog/plans/`). Render with `blog/scripts/render_post.py`, push new drafts with `website/build/cura-blog-push.php` (drafts only, idempotent by slug); refresh published content with `cura-blog-update.php`.
+- **CSS:** Breakdance global stylesheet "Cura: blog" (copy in `blog/templates/cura-blog.css`); blog CTA standard applied (phone = outlined secondary button, equal-width column buttons).
+- **Single Post template 369:** pack Gallery (hotlinked bdlayoutspack.com) and generic Social Share removed. Still pack layout otherwise (search, categories, tag cloud, archives, comments). Decide sidebar + comments before publishing.
+- **Before Phase B (publish):**
+  - Publish all three together (hub and spokes link to each other).
+  - Louisiana Medicaid details are confirmed for one plan only (Louisiana Healthcare Connections); LDH pages blocked automated checks. Verify in a browser.
+  - Phase C: apply `blog/plans/*-inbound.json` (service intro links + hub cross-links).
+
+## Resources (blog archive), 2026-09-24
+
+- **Resources page 1547** (`/resources/`) is the posts page (`page_for_posts`), 9 posts per page. SEOPress title/description set.
+- **Post Archive template 454** (posts page + category archives): hero H1 and breadcrumb use Archive Title; Posts Loop on the main query with number pagination, 3-column grid like Services.
+- **Blocks:** Post card 1549 (Service card clone: featured image, category eyebrow, excerpt, "Read article" pinned to the bottom), Resources empty 1550.
+- **WPCodeBox snippet 1 ("Custom PHP")**: appended `cura-archive-title` filters (posts page shows "Resources" instead of "Archives"; no "Category:" prefix). Original code backed up in option `cura_wpcb_snippet1_backup`.
+- CSS in "Cura: blog" (copy: `blog/templates/cura-blog.css`). Build script: `website/build/cura-resources.php` (idempotent).
+- **Links:** Resources is in the footer Helpful links (Footer 244, second column after FAQs); not in the header menu (Clint's call).
+- **Homepage "Helpful guides" section (Home 67 #213):** pack Postslist replaced by the same Posts Loop + Post card (latest 3 published posts, Resources empty state).
+- **Open:** card grid verified server-side only until posts are published.
+
+## Blog publish (Phase B + C), 2026-09-24
+
+- **Published, backdated one a week:** 1541 hub (2026-09-10), 1543 discharge (2026-09-17), 1545 wheelchair/walker (2026-09-24), all 9:00 am Central. `/caregiver-guides/<slug>/`.
+- Verified in browser: 1 H1, 3 CTAs each (phone outlined secondary, equal 520px buttons), SVG, quick answer, TLDR, Article + FAQPage schema; all 21 internal links 200; Resources grid equal-height cards with aligned buttons.
+- **Inbound links (blog/plans):** intro paragraphs added to services 1338 doctor, 1346 wheelchair, 1350 discharge, 1358 senior; hub 1541 now links to both spokes (also in the hub markdown).
+- Single Post template 369: all comment elements removed (post-meta comment count, CommentsList, CommentForm). Comments are also off site-wide via WPCodeBox snippet 1. Previous/next post links kept.
+- Related links box has a "Related reading" title (styled p.cura-related-title, not a heading), added by blog/scripts/render_post.py.
+- **Still open:** Single Post sidebar/"More articles" (pack Postslist) redesign; category archive noindex; Louisiana Medicaid details confirmed on one plan's page only.
+- **Blog interlinking (2026-09-24):** every post links to both siblings in the body (distinct anchors) and at the top of its Related reading box. Source of truth is the markdown; re-render with `blog/scripts/render_post.py`, then refresh live content with `website/build/cura-blog-update.php` (content only; keeps dates/status/meta).
+- **SEO completion (2026-09-24):** see seo/keyword-research.md §9a. 31 indexed items, 0 gaps; pack demo categories/tags deleted; default category = Caregiver guides.
+- **Category archives noindexed (2026-09-24):** SEOPress Titles > Taxonomies > Categories = noindex, and categories removed from the XML sitemap. Posts and /resources/ stay indexed. Reverse both once there is more than one category.
+
+## Service pages as landing pages (2026-09-24)
+- **New Service Content fields (group 1337):** `hero_subhead` (text), `who_for` (wysiwyg), `faq_heading` (text), filled for all 9 services (`website/build/cura-service-landing-fields.php`). Copy stays inside existing site claims.
+- **Single Service 1387** (`website/build/cura-service-landing-template.php`): hero = H1, breadcrumb, subheading, "Request this ride" (jumps to the sidebar form `#request-ride`) + "Call (225) 363-0845". After the highlights: "Who this ride is for" (field), "How booking a ride works" (3 static steps), "Serving the Baton Rouge area" (static, links to /rates/). FAQ kicker removed; FAQ H2 = `faq_heading` (fallback "Common questions").
+- **Mobile/tablet (<1120px):** the sidebar (services list + form) follows the content. CSS: "Cura: service landing" (copy: `website/build/cura-service-landing.css`).
+- **Footer CTA (244):** "Request a ride" (white solid) + "Call (225) 363-0845" (outlined) in one row; footer contact phone line also reads "Call (225) 363-0845".
+- **Per-service section headings (2026-09-24):** fields `who_heading`, `how_heading`, `area_heading`, `area_text` (group 1337), filled for all 9 (`website/build/cura-service-landing-headings.php`); template H2s use them with the generic text as fallback. The 3 booking steps stay shared.
+
+## Typography note: slashed zero (decided 2026-09-24: keep)
+- The body font, Atkinson Hyperlegible (Braille Institute), draws 0 with a diagonal slash on purpose so it can't be confused with the letter O. There is no plain-zero alternate (tested: its OpenType features and Atkinson Hyperlegible Next both keep the slash).
+- Clint chose to keep it for legibility. If Michael asks: it's an accessibility feature for low-vision riders. Fallback if he dislikes it: set phone links and buttons in Montserrat, or change the body font (fonts are still an open confirmation).
+
+## WP Engine (review site), 2026-09-24
+- **URL:** https://curamobility.wpenginepowered.com (pushed from Local by Clint). Environment type `production`, so the Sample reviews are hidden there automatically.
+- **Novamira MCP:** `novamira-curamobility-wpe` (local scope in ~/.claude.json; app password not in the repo). Local site keeps `novamira-cura-mobility-lo`. Changes made after the push were applied to BOTH sites.
+- **Search-and-replace:** the push had already updated home/siteurl, options and post content, but missed 44 `_breakdance_data` rows (JSON-escaped URLs). Replaced host `cura-mobility.local` → `curamobility.wpenginepowered.com` (dry run first; JSON validated per row), 0 left; Breakdance caches rebuilt (94 posts); WPE memcached + Varnish purged. Script: `website/build/cura-search-replace.php`. GUIDs left as is.
+- **Error log fix:** `mbr.to IN ()` SQL error from Breakdance cache regeneration. Relationship loops (1387 #169, #269; block 1454 #107) now return an empty query when there is no ID (`website/build/cura-relationship-guard.php`).
+- **Regression fixed:** re-running the service template script had rewritten the "Cura: service landing" CSS without the inline-button fix; the fix now lives in the script. Hero + footer CTA buttons are inline ≥768px, stacked on phones.
+- **Booking links:** every "Book a ride" / "Request a ride" / "Request this ride" button links to /book-a-ride/ (the service hero button no longer jumps to the sidebar form).
+- WP Engine's Cloudflare blocks curl (403); check pages with a browser (Playwright) or via the MCP.

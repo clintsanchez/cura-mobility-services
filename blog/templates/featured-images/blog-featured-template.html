@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cura Mobility Services featured image template (1080x608)</title>
+
+    <!--
+      Cura palette from website/css-tokens.css (2026-09-22): Cura Navy #02265A base, Teal Tint #E6F4F4.
+      Highlight is a light teal (#8FD9D9, about 8:1 on navy); brand teal #058D8D is too dark on navy for text.
+      Montserrat (headings) + Atkinson Hyperlegible (body). Google Fonts is used HERE only (offline render);
+      the site self-hosts both. Logo: no-book horizontal on-navy lockup (same as the footer).
+      Photos: use Cura's own media library. No van-lift or ramp photos (vehicle equipment unconfirmed).
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-gold:        #8FD9D9;
+            --brand-gold-deep:   #058D8D;
+            --brand-gold-bright: #E6F4F4;
+            --brand-purple:      #02265A;
+            --brand-purple-deep: #011A40;
+            --bg-base:           #02265A;
+            --bg-surface:        #0A3A7A;
+            --text-primary:      #FEFEFE;
+            --text-muted:        #D5E0EC;
+            --font-head: 'Montserrat', sans-serif;
+            --font-body: 'Atkinson Hyperlegible', sans-serif;
+            --container-width: 1080px;
+            --container-height: 608px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: #1A2433;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #capture {
+            width: var(--container-width);
+            height: var(--container-height);
+            background: var(--bg-base);
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        /* Asymmetric split. The photo carries more of the frame than a stock
+           template would give it, because real project photography is the
+           anti-AI lever per memory ttc-assets-and-direction. */
+        .text-panel {
+            width: 56%;
+            height: 100%;
+            padding: 56px 44px 56px 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 20;
+        }
+
+        /* Soft vignette so the panel reads as depth, not a flat fill. */
+        .text-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(120% 100% at 0% 40%,
+                        var(--bg-surface) 0%,
+                        var(--bg-base) 68%);
+            z-index: -1;
+        }
+
+        .category-tag {
+            background: var(--brand-gold-bright);
+            color: var(--brand-purple);   /* navy on teal tint */
+            padding: 7px 15px;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 11.5px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            display: inline-block;
+            align-self: flex-start;
+            border-radius: 3px;
+        }
+
+        h1.article-title {
+            font-family: var(--font-head);
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 45px;
+            line-height: 1.08;
+            letter-spacing: -0.8px;
+            margin: 0 0 22px 0;
+            max-width: 540px;
+        }
+
+        /* Restraint with gold: one highlighted phrase, nothing more. */
+        h1.article-title .highlight { color: var(--brand-gold); }
+
+        .sub-deck {
+            font-family: var(--font-body);
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.55;
+            font-weight: 400;
+            margin: 0;
+            padding-left: 18px;
+            border-left: 3px solid var(--brand-gold);
+            max-width: 470px;
+        }
+
+        .footer-row {
+            position: absolute;
+            bottom: 40px;
+            left: 64px;
+            right: 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            z-index: 22;
+        }
+
+        /* Two deliberate stacked lines. Joining the service area and the domain
+           into one run overflows the 56% panel and wraps mid-phrase, which
+           leaves a dangling separator and reads as a mistake. */
+        .footer-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 0;
+        }
+
+        .service-loc {
+            font-family: var(--font-head);
+            color: var(--text-muted);
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            opacity: 0.80;
+        }
+
+        .site-url {
+            font-family: var(--font-head);
+            color: var(--brand-gold);
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .footer-logo img {
+            height: 34px;
+            display: block;
+        }
+
+        .image-panel {
+            width: 44%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-surface);
+        }
+
+        .image-panel .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('{{IMAGE_URL}}');
+            background-size: cover;
+            background-position: center;
+            /* The client's real photos are mostly golden-hour and shadow-heavy.
+               Under the scrim they go muddy and the subject stops reading, so
+               lift them before the scrim lands on top. */
+            filter: brightness(1.05) contrast(1.02);
+        }
+
+        /* Feathered edge instead of a hard seam, so the two halves read as one
+           composition rather than a two-column template block. */
+        .image-panel .scrim {
+            position: absolute;
+            inset: 0;
+            background:
+              linear-gradient(90deg,
+                  var(--bg-base) 0%,
+                  rgba(2, 38, 90, 0.66) 13%,
+                  rgba(2, 38, 90, 0.06) 42%,
+                  rgba(2, 38, 90, 0.00) 100%),
+              linear-gradient(180deg,
+                  rgba(1, 26, 64, 0.16) 0%,
+                  rgba(2, 38, 90, 0.24) 100%);
+        }
+
+        .accent-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg,
+                        var(--brand-gold) 0%,
+                        var(--brand-gold-deep) 58%,
+                        var(--brand-purple) 100%);
+            z-index: 24;
+        }
+    </style>
+</head>
+<body>
+    <div id="capture">
+        <div class="text-panel">
+            <span class="category-tag">{{CATEGORY_TAG}}</span>
+
+            <h1 class="article-title">{{ARTICLE_TITLE_HTML}}</h1>
+
+            <p class="sub-deck">{{SUB_DECK}}</p>
+
+            <div class="footer-row">
+                <span class="footer-meta">
+                    <span class="service-loc">{{SERVICE_LOC}}</span>
+                    <span class="site-url">{{SITE_URL}}</span>
+                </span>
+                <div class="footer-logo">
+                    <img src="{{LOGO_URL}}" alt="Cura Mobility Services logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="image-panel">
+            <div class="hero-bg"></div>
+            <div class="scrim"></div>
+        </div>
+
+        <div class="accent-stripe"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 430" width="100%" role="img" aria-label="Chart matching a parent's needs to a type of ride. If they walk and manage on their own, a family ride, taxi or rideshare can work. If they need a steady hand from the door to the seat, help with a walker or wheelchair, or a patient driver, a door-to-door medical ride fits. If they need medical care on the way or have an emergency, call 911.">
+  <rect width="1080" height="430" rx="20" fill="#F3F6F9"/>
+  <text x="540" y="58" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="#02265A">Match the ride to what your parent needs</text>
+  <g font-family="Atkinson Hyperlegible, Verdana, sans-serif">
+    <rect x="40" y="96" width="320" height="296" rx="16" fill="white" stroke="#DDE3EA" stroke-width="2"/>
+    <rect x="40" y="96" width="320" height="64" rx="16" fill="#5A6675"/><rect x="40" y="140" width="320" height="20" fill="#5A6675"/>
+    <text x="200" y="137" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="20" font-weight="700" fill="white">Family ride or rideshare</text>
+    <text x="64" y="200" font-size="18" font-weight="700" fill="#1A2433">Fits when your parent:</text>
+    <text x="64" y="236" font-size="18" fill="#1A2433">• Walks to the car alone</text>
+    <text x="64" y="268" font-size="18" fill="#1A2433">• Checks in without help</text>
+    <text x="64" y="300" font-size="18" fill="#1A2433">• Feels fine after the visit</text>
+    <text x="64" y="332" font-size="18" fill="#1A2433">• Is steady on their feet</text>
+
+    <rect x="380" y="96" width="320" height="296" rx="16" fill="white" stroke="#047878" stroke-width="3"/>
+    <rect x="380" y="96" width="320" height="64" rx="16" fill="#047878"/><rect x="380" y="140" width="320" height="20" fill="#047878"/>
+    <text x="540" y="137" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="20" font-weight="700" fill="white">Door-to-door medical ride</text>
+    <text x="404" y="200" font-size="18" font-weight="700" fill="#1A2433">Fits when your parent:</text>
+    <text x="404" y="236" font-size="18" fill="#1A2433">• Needs a steady hand</text>
+    <text x="404" y="268" font-size="18" fill="#1A2433">• Uses a walker or wheelchair</text>
+    <text x="404" y="300" font-size="18" fill="#1A2433">• Is tired after treatment</text>
+    <text x="404" y="332" font-size="18" fill="#1A2433">• Needs help to check in</text>
+    <text x="404" y="364" font-size="18" fill="#1A2433">• Has standing appointments</text>
+
+    <rect x="720" y="96" width="320" height="296" rx="16" fill="white" stroke="#DDE3EA" stroke-width="2"/>
+    <rect x="720" y="96" width="320" height="64" rx="16" fill="#02265A"/><rect x="720" y="140" width="320" height="20" fill="#02265A"/>
+    <text x="880" y="137" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="20" font-weight="700" fill="white">Ambulance: call 911</text>
+    <text x="744" y="200" font-size="18" font-weight="700" fill="#1A2433">Call 911 when your parent:</text>
+    <text x="744" y="236" font-size="18" fill="#1A2433">• Has chest pain or trouble</text>
+    <text x="760" y="262" font-size="18" fill="#1A2433">breathing</text>
+    <text x="744" y="294" font-size="18" fill="#1A2433">• Shows signs of a stroke</text>
+    <text x="744" y="326" font-size="18" fill="#1A2433">• Needs medical care on</text>
+    <text x="760" y="352" font-size="18" fill="#1A2433">the way</text>
+  </g>
+</svg>

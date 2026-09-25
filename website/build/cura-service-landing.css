@@ -1,0 +1,25 @@
+/* Single Service as a landing page (template 1387): hero subheading + CTAs, content sections, mobile order */
+.breakdance .cura-hero-subhead{color:white;font-size:18px;line-height:1.5;max-width:680px;text-align:center;margin:6px auto 0}
+.breakdance .cura-hero-ctas{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:8px}
+.breakdance .cura-request-ride{scroll-margin-top:140px}
+.breakdance .cura-svc-section{margin:45px 0 0;width:100%}
+.breakdance .cura-svc-who-text ul{margin:10px 0 0;padding-left:22px}
+.breakdance .cura-svc-who-text li{margin:0 0 6px}
+.breakdance .cura-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:cura-step}
+.breakdance .cura-step{background:#F3F6F9;border-radius:14px;padding:24px 22px;counter-increment:cura-step}
+.breakdance .cura-step::before{content:counter(cura-step);display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#02265A;color:white;font-family:Montserrat,Arial,sans-serif;font-weight:700;font-size:18px;margin-bottom:14px}
+.breakdance .cura-step .cura-step-title{font-size:19px;margin:0 0 8px}
+.breakdance .cura-step p,.breakdance .cura-step .bde-text{margin:0;font-size:16px}
+.breakdance .cura-svc-area p{margin:0 0 10px}
+.breakdance .cura-svc-faq-heading{margin-top:45px}
+.breakdance .cura-footer-cta-buttons{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;justify-content:center;gap:14px}
+@media (max-width:1119px){
+  .breakdance .cura-svc-main{order:1}
+  .breakdance .cura-svc-sidebar{order:2}
+}
+@media (max-width:767px){
+  .breakdance .cura-steps{grid-template-columns:1fr}
+  .breakdance .cura-hero-ctas,.breakdance .cura-footer-cta-buttons{flex-direction:column;align-items:stretch;width:100%;max-width:360px;margin-left:auto;margin-right:auto}
+  .breakdance .cura-hero-ctas .bde-button,.breakdance .cura-footer-cta-buttons .bde-button{width:100%}
+  .breakdance .cura-hero-ctas .bde-button__button,.breakdance .cura-footer-cta-buttons .bde-button__button{width:100%;justify-content:center}
+}

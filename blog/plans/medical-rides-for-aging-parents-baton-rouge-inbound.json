@@ -1,0 +1,10 @@
+[
+  {"post_id": 1358, "field": "intro", "mode": "append_paragraph",
+   "anchor": "caregiver's guide to medical rides for aging parents",
+   "before": "Arranging rides for a parent? Our ", "after": " walks families through choosing, booking and preparing each trip."},
+  {"post_id": 1338, "field": "intro", "mode": "append_paragraph",
+   "anchor": "planning rides for a parent who no longer drives",
+   "before": "Booking for someone else? Read our guide to ", "after": "."},
+  {"post_id": 1543, "field": "post_content", "mode": "already_linked", "anchor": "caregiver's guide to medical rides"},
+  {"post_id": 1545, "field": "post_content", "mode": "already_linked", "anchor": "caregiver's guide to medical rides"}
+]

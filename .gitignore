@@ -6,3 +6,5 @@ __pycache__/
 *.pyc
 build/*.html
 .playwright-mcp/
+blog/wp-blog-publisher/
+blog/wp-publish.json

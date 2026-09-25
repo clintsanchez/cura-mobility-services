@@ -1,0 +1,9 @@
+[
+  {"post_id": 1350, "field": "intro", "mode": "append_paragraph",
+   "anchor": "what to ask and bring before discharge day",
+   "before": "Planning for a parent? See our checklist of ", "after": "."},
+  {"post_id": 1541, "field": "post_content", "mode": "insert_after_text",
+   "match": "and they free you from the weekly scramble.",
+   "anchor": "planning the ride home after a hospital stay",
+   "before": " If your parent is in the hospital now, start with our guide to ", "after": "."}
+]
