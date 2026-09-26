@@ -25,3 +25,6 @@ Sent by Clint 2026-09-22 to mveal72@yahoo.com (Gmail thread 1a0cc079d1aa2992).
 - About-page quote attributed to him; "we call when on the way" and recurring-ride confirmation promises.
 - Policy review by an attorney + effective date; colors, fonts, tagline.
 - Insurance and LPSC before launch (business readiness; the site makes no such claims).
+
+## Reply drafted 2026-09-26 (Gmail draft in the same thread, to mveal72@yahoo.com + curamobile88@gmail.com; not sent)
+Confirms the changes made and asks: 1) what "non ambulatory" means (stretcher vs non-emergency), 2) additional services, 3) days and hours, 4) pricing model for online booking (per mile / flat / wheelchair, wait-time and group fees; full payment or deposit), 5) cancellation and refund policy, 6) what the faith element should be, 7) revised logo files. Includes the review link https://curamobility.wpenginepowered.com (public; add a password first if needed).
