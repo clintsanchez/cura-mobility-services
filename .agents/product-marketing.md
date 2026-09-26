@@ -44,6 +44,15 @@ Professional, Empathetic / Warm, Friendly / Approachable
 ## Competitors
 _not captured_
 
+## Confirmed by Michael (2026-09-25)
+- **Domain:** curamobility.org. **Business email:** curamobile88@gmail.com. **Business phone:** coming by 2026-09-28 (the (225) 363-0845 on the site is temporary).
+- **Services:** wheelchair, doctor appointments, dialysis, airport transfers, private rides for individuals or groups; more to come. ("Non ambulatory" wording to clarify.)
+- **Coverage:** the entire state of Louisiana (Baton Rouge-based). **No public address.**
+- **Fleet:** 3 vans, 1 wheelchair accessible.
+- **Payer:** private pay; broker enrollment later. Customers should be able to buy and schedule rides online.
+- **Faith element:** include it on the website.
+- **Not yet:** insurance, Google Business Profile (both at launch).
+
 ## ⚠️ Accuracy guardrails
 - Never fabricate reviews, license numbers, years in business, or credentials.
 - Verify public-record claims before publishing (see `06-Reports/records-check.md`).

@@ -29,7 +29,7 @@ Michael Veal (Cura Mobility Services). Brief + brand docs populated from real su
 - **CSS prefix:** `cura-`. See `CONTENT-ENGINE-CONTRACT.md`.
 - **Research:** `06-Reports/research-2026-09-22.md` (domain, licensing path, competitors, keywords).
 - **Client asks:** `CLIENT-ASKS.md`, **sent 2026-09-22**, awaiting answers. Everything downstream waits on #1 to #3.
-- **Guardrails:** no "licensed", no "Medicaid provider", no tenure, no address, no "statewide" until confirmed.
+- **Guardrails:** no "licensed", no "insured" (no insurance yet, per Michael 2026-09-25), no "Medicaid provider" (private pay; brokers later), no tenure, no address (Michael: none needed). **Statewide coverage is confirmed** (entire state of Louisiana) and **one wheelchair-accessible van** is confirmed (3 vans total), both per Michael 2026-09-25. See `CLIENT-ASKS.md`.
 - Survey had no business-name field; the name came from the uploaded logo.
 
 ## Brand package (2026-09-22)
@@ -150,3 +150,21 @@ authoritative sources. Do not print unverified credentials.
 - **Regression fixed:** re-running the service template script had rewritten the "Cura: service landing" CSS without the inline-button fix; the fix now lives in the script. Hero + footer CTA buttons are inline ≥768px, stacked on phones.
 - **Booking links:** every "Book a ride" / "Request a ride" / "Request this ride" button links to /book-a-ride/ (the service hero button no longer jumps to the sidebar form).
 - WP Engine's Cloudflare blocks curl (403); check pages with a browser (Playwright) or via the MCP.
+
+## Michael's answers applied, step 1 (2026-09-25, WP Engine)
+Source: `CLIENT-ASKS.md` (his 2026-09-25 replies). Scan: `website/build/cura-client-answers-scan.php`; apply (dry-run first): `website/build/cura-client-answers-apply.php`.
+- **Email:** info@curamobility.org → **curamobile88@gmail.com** everywhere (header top bar, footer, Contact, policy/form/confirmation sidebars, sitemap, 5 policies). Only 2 old revisions still contain it.
+- **Form notifications:** all 7 WS Forms now email **curamobile88@gmail.com** (was mveal72@yahoo.com).
+- **Coverage:** "Baton Rouge area" wording → Baton Rouge-based, **all of Louisiana** (top bar/footer "Serving all of Louisiana", service-area H2s "… from Baton Rouge across Louisiana", area text now "Call … to plan your ride", long-distance "anywhere in Louisiana", FAQs, SEO descriptions, policies). Contact map now shows Louisiana (zoom 7). **Blog posts intentionally unchanged** (Baton Rouge local-hook articles).
+- **Wheelchair:** one wheelchair-accessible van: wheelchair intro paragraph (book early), highlight, subheading, SEO description; FAQs 1347 (bring your own chair) and 1377 updated.
+- **Private pay:** Medicaid FAQ 1380 now says Cura is private pay.
+- **NOT yet on the Local site** (it was stopped). Run the same apply script there before any future push from Local, or WP Engine becomes the source of truth.
+- **Pending:** new business phone (Monday) → global swap incl. the 3 blog featured images; faith element + revised logo; new services (airport transfers, private rides); online booking/payment scope.
+
+## Business info settings (2026-09-25, WP Engine)
+- **Settings → Business info** (Meta Box settings page `cura_business`, post 1607; field group 1608). Fields: `business_email`, `phone_display`, `phone_tel`. Stored in option `cura_business`.
+- **Email is dynamic everywhere on the site:** Breakdance binds to dynamic field `metabox_field_cura_business_business_email` (header top bar + mailto, footer + mailto, Contact page, Single Policy/Form/Confirmation sidebars, Sitemap); the 5 policies use `[cura_email]`. Verified by switching the setting to a test address (every page followed), then restoring it.
+- **Shortcodes** (WPCodeBox snippet 1 "Custom PHP", backup in option `cura_wpcb_snippet1_backup_20260925`): `[cura_email]`, `[cura_phone]` (`link="no"` for plain text), helper `cura_business($key)`.
+- **Still static:** WS Form notification recipients (curamobile88@gmail.com in each form's email action). Change them in WS Form if the address changes.
+- **Phone is dynamic everywhere too (2026-09-25):** Breakdance binds `metabox_field_cura_business_phone_display` (text) and `…_phone_tel` (tel: links) in 25 layouts; page content (policies, FAQ, blog), Meta Box fields (service area text, FAQ answers, confirmations) use `[cura_phone]`, `[cura_phone link=no]`, `tel:[cura_phone_tel]` (snippet section `cura-business-phone` runs shortcodes on `rwmb_get_value`); SEOPress descriptions use `{cura_phone}` (filtered). Script: `website/build/cura-phone-dynamic.php`. Verified by switching to a test number: 15 pages incl. blog, confirmation, policy, forms and SEO descriptions all followed, 0 old references, no raw shortcodes; restored.
+- **When Michael's new number arrives:** Settings → Business info → update both phone fields. Then remake the 3 blog featured images (the number is baked into them): `blog/scripts/generate-featured-image.py` defaults show it in the footer line. `blog/scripts/render_post.py` now emits the shortcodes, so re-renders stay dynamic.

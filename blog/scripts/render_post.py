@@ -29,6 +29,18 @@ RELATED_TITLE = ('<!-- wp:paragraph {"className":"cura-related-title"} -->\n'
                  '<!-- /wp:paragraph -->\n')
 
 
+# The phone number lives in WordPress (Settings > Business info). Posts carry shortcodes, not the number:
+# [cura_phone] = linked number, [cura_phone link=no] = plain number, [cura_phone_tel] = digits for tel: hrefs.
+PHONE_DISPLAY = "(225) 363-0845"
+PHONE_TEL = "+12253630845"
+
+
+def dynamic_phone(text: str) -> str:
+    text = text.replace(f'<a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a>', "[cura_phone]")
+    text = text.replace(f"tel:{PHONE_TEL}", "tel:[cura_phone_tel]")
+    return text.replace(PHONE_DISPLAY, "[cura_phone link=no]")
+
+
 def add_related_title(html: str) -> str:
     if "cura-related-title" in html:
         return html
@@ -70,7 +82,7 @@ def main() -> None:
                 break
     faqs = wp.extract_faqs("\n".join(probe))
     if faqs:
-        src.with_suffix(".faq-schema.html").write_text(wp.build_faq_jsonld(faqs) + "\n")
+        src.with_suffix(".faq-schema.html").write_text(dynamic_phone(wp.build_faq_jsonld(faqs)) + "\n")
 
     body, blocks = wp.process_mda_blocks(body, PREFIX)
     html = wp.markdown_to_html(body)
@@ -78,6 +90,7 @@ def main() -> None:
         html = html.replace(f"<p>{ph}</p>", rendered).replace(ph, rendered)
     html = wp.wrap_tables_with_mda(html, PREFIX)
     html = add_related_title(html)
+    html = dynamic_phone(html)
     html = wp.wrap_gutenberg_blocks(html)
 
     keys = ["slug", "excerpt", "seo_title", "seo_description", "target_keyword",

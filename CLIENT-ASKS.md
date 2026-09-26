@@ -1,16 +1,27 @@
 # Cura Mobility Services: asks for Michael
 
-Sent by Clint 2026-09-22 to mveal72@yahoo.com (Gmail thread 1a0cc079d1aa2992). Awaiting answers.
+Sent by Clint 2026-09-22 to mveal72@yahoo.com (Gmail thread 1a0cc079d1aa2992).
+**Answered by Michael 2026-09-25** (two replies in the same thread). His words are paraphrased closely below.
 
-1. Which domain do you own: curamobility.org, curamobility.com, or both?
-2. In a sentence or two, what services do you offer (ambulatory, wheelchair, stretcher, dialysis, long distance)?
-3. What would customers buy on the online store: ride bookings, equipment, or something else?
-4. Are you enrolled with MediTrans or Verida yet, or private-pay only for now?
-5. Do you have your LPSC certificate, for-hire plates and NEMT insurance? Please send copies.
-6. Which address should we show publicly, Baton Rouge, St. Francisville, or none?
-7. Which parishes or cities do you actually cover today?
-8. How many vehicles do you have, and are any wheelchair-accessible?
-9. Do you want the faith element on the website, or only in the logo?
-10. Is Joyce Veal part of the business?
-11. Can you resend the logo vector files (.ai, .eps or .svg)? We couldn't find them.
-12. We couldn't find a Google Business Profile. Do you have one, and under what name?
+| # | Question | Michael's answer (2026-09-25) |
+|---|---|---|
+| 1 | Domain: .org, .com, or both? | **curamobility.org** is the one he owns. |
+| 2 | Services? | "Non ambulatory services, wheelchair, doctors appointments, dialysis, but not limited to **airport transfers, private rides, for individuals or groups**." Wants to add more services (list to come). ⏳ Clarify "non ambulatory" (riders who cannot walk, i.e. stretcher? or "non-emergency"?). |
+| 3 | What would customers buy online? | "Customers will **purchase and schedule rides online**." (New scope: online payment + booking.) |
+| 4 | MediTrans / Verida, or private pay? | Will enroll with brokers later; **this website is geared for private pay**. |
+| 5 | LPSC certificate, for-hire plates, NEMT insurance? | **No insurance yet.** LPSC and plates not answered. No "licensed/insured" claims. |
+| 6 | Public address? | **No address necessary.** |
+| 7 | Coverage? | **Entire state of Louisiana.** |
+| 8 | Vehicles? | **3 vans, 1 wheelchair accessible.** |
+| 9 | Faith element? | **Should be included** on the website. |
+| 10 | Joyce Veal? | He does **not know** a Joyce Veal (drop the NPPES lead). |
+| 11 | Logo vectors? | He will send **another, revised logo**. |
+| 12 | Google Business Profile? | **Not registered** until the business actually launches. |
+
+**Also from his first reply:** business email is **curamobile88@gmail.com**; he'll send a **business phone number by Monday (2026-09-28)**. The (225) 363-0845 on the site is the onboarding contact number and will be replaced.
+
+## Still open
+- Hours; pricing model (required for online payment); new services list; "non ambulatory" meaning.
+- About-page quote attributed to him; "we call when on the way" and recurring-ride confirmation promises.
+- Policy review by an attorney + effective date; colors, fonts, tagline.
+- Insurance and LPSC before launch (business readiness; the site makes no such claims).
