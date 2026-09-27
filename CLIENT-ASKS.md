@@ -41,3 +41,7 @@ Confirms the changes made and asks: 1) what "non ambulatory" means (stretcher vs
 
 ## Reply drafted 2026-09-27 (not sent)
 Confirms slogan, mission, area-based wording, name removed, services scope; points him to Markup.io (https://app.markup.io/invite/accept/FpCQyujH) for repetition and other feedback; re-asks phone, services, hours, pricing, cancellation policy, faith element, logo files.
+
+## Built 2026-09-27
+- Airport transfers and Private and group rides service pages (his 2026-09-25 list). No group size or airport list confirmed; copy says "tell us how many are riding" and names Baton Rouge and New Orleans airports as examples only.
+- FAQ: no stretcher or ambulance transport.
