@@ -38,3 +38,6 @@ Confirms the changes made and asks: 1) what "non ambulatory" means (stretcher vs
 - Feedback: copy "seems a little repetitive overall, other than that we looking good." (Candidates: identical icon boxes on Home and About, "clear price before you book" repeated in highlights/steps/area text.)
 - Sent a JPEG attachment (not yet reviewed; likely the revised logo). Save it to Downloads to review.
 - **Still unanswered:** other services, hours, pricing model, cancellation/refund policy, faith element specifics, logo files, phone number.
+
+## Reply drafted 2026-09-27 (not sent)
+Confirms slogan, mission, area-based wording, name removed, services scope; points him to Markup.io (https://app.markup.io/invite/accept/FpCQyujH) for repetition and other feedback; re-asks phone, services, hours, pricing, cancellation policy, faith element, logo files.
