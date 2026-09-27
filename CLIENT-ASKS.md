@@ -39,9 +39,12 @@ Confirms the changes made and asks: 1) what "non ambulatory" means (stretcher vs
 - Sent a JPEG attachment (not yet reviewed; likely the revised logo). Save it to Downloads to review.
 - **Still unanswered:** other services, hours, pricing model, cancellation/refund policy, faith element specifics, logo files, phone number.
 
-## Reply drafted 2026-09-27 (not sent)
+## Reply drafted 2026-09-27 (not sent; superseded by the second 2026-09-27 draft below)
 Confirms slogan, mission, area-based wording, name removed, services scope; points him to Markup.io (https://app.markup.io/invite/accept/FpCQyujH) for repetition and other feedback; re-asks phone, services, hours, pricing, cancellation policy, faith element, logo files.
 
 ## Built 2026-09-27
 - Airport transfers and Private and group rides service pages (his 2026-09-25 list). No group size or airport list confirmed; copy says "tell us how many are riding" and names Baton Rouge and New Orleans airports as examples only.
 - FAQ: no stretcher or ambulance transport.
+
+## Second reply drafted 2026-09-27 (not sent; replaces the first 9/27 draft)
+Same as the first 9/27 draft plus the two new service pages and the no-stretcher FAQ, the review-site link, and clean (non-redirect) links.
