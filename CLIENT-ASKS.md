@@ -28,3 +28,13 @@ Sent by Clint 2026-09-22 to mveal72@yahoo.com (Gmail thread 1a0cc079d1aa2992).
 
 ## Reply drafted 2026-09-26 (Gmail draft in the same thread, to mveal72@yahoo.com + curamobile88@gmail.com; not sent)
 Confirms the changes made and asks: 1) what "non ambulatory" means (stretcher vs non-emergency), 2) additional services, 3) days and hours, 4) pricing model for online booking (per mile / flat / wheelchair, wait-time and group fees; full payment or deposit), 5) cancellation and refund policy, 6) what the faith element should be, 7) revised logo files. Includes the review link https://curamobility.wpenginepowered.com (public; add a password first if needed).
+
+## Michael's replies 2026-09-27 (from curamobile88@gmail.com)
+- **"Non ambulatory"** = regular passengers and wheelchair passengers only. **No stretcher/ambulance service** ("not my cup of tea"). Site already matches.
+- "I'd rather use customer service instead of have my name attached." Applied as: no owner name on the public site (home call block now "Customer service", home quote now the mission statement labelled "Our mission", About intro no longer says "owned by Michael Veal"). If he only meant ambulance work, restoring the name is a two-field change.
+- **Slogan:** "Always on time, Always with care!" → used as "Always on time, always with care!" (home hero eyebrow, footer brand text, WP site tagline).
+- **Mission:** "Providing compassionate care and treating every rider with a Louisiana-proud, neighborly approach." → home quote card + About intro.
+- **Positioning:** "A Baton Rouge area based company" → home About section, About page, service-area FAQ now say "Baton Rouge area-based company".
+- Feedback: copy "seems a little repetitive overall, other than that we looking good." (Candidates: identical icon boxes on Home and About, "clear price before you book" repeated in highlights/steps/area text.)
+- Sent a JPEG attachment (not yet reviewed; likely the revised logo). Save it to Downloads to review.
+- **Still unanswered:** other services, hours, pricing model, cancellation/refund policy, faith element specifics, logo files, phone number.

@@ -1,3 +1,8 @@
+## Client-confirmed (2026-09-27)
+- **Slogan:** Always on time, always with care!
+- **Mission:** Providing compassionate care and treating every rider with a Louisiana-proud, neighborly approach.
+- **Positioning line:** A Baton Rouge area-based company serving all of Louisiana.
+
 # Messaging Framework: Cura Mobility Services
 
 *v1 draft, 2026-09-22/23. Built on `context.md` and `voice.md`. For Michael to review and choose. ⏳ = a proof point that is only usable once Michael confirms it's true in operation. Guardrails: no "licensed", "Medicaid provider", "statewide", tenure or invented numbers.*
